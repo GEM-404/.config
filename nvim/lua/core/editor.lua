@@ -231,7 +231,7 @@ cmp.setup {
 
 -- Completion settings
   completion = {
-    --completeopt = 'menu,menuone,noselect'
+    completeopt = 'menu,menuone,noselect',
     keyword_length = 2
   },
 
@@ -344,6 +344,7 @@ M.rose_pine = {
 }
 
 
+-- autocmd BufEnter * lua require'completion'.on_attach()
 
 
 local nvim_lsp = require 'lspconfig'
@@ -487,6 +488,7 @@ augroup indent_blankline
   autocmd InsertLeave * call Should_activate_indentblankline()
 augroup END
 ]])
+
 
 
 return M
