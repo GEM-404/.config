@@ -1,4 +1,4 @@
------------------------------------------------------------
+----------------------------------------------------------
 -- Plugin manager configuration file
 -----------------------------------------------------------
 
@@ -27,6 +27,9 @@ return packer.startup(function()
 
   -- fatih/vim-go
   use 'fatih/vim-go'
+
+  -- auto-completion
+  use 'nvim-lua/completion-nvim'
     
 
   -- File explorer
