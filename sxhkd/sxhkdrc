@@ -210,4 +210,10 @@ alt + shift + {h, j, k, l}
 super + shift + i
 	sh ~/.config/bspwm/bin/winmask
 
+# One more keybinding to go
+super + shift + {Left,Down,Up,Right}
+	dir={west,south,north,east}; \
+	bspc node -s "$dir.local" --follow \
+	    || bspc node -m "$dir" --follow
+
 ##---------- EOF ----------##
