@@ -1,0 +1,16 @@
+[Added Associations]
+image/png=viewnior.desktop;
+image/jpeg=viewnior.desktop;
+image/gif=viewnior.desktop;
+image/svg+xml=viewnior.desktop;
+text/x-csrc=geany.desktop;
+text/plain=geany.desktop;
+application/x-shellscript=geany.desktop;
+application/x-theme=geany.desktop;
+application/json=geany.desktop;
+application/vnd.openxmlformats-officedocument.presentationml.presentation=firefox.desktop;atril.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=firefox.desktop;
+
+[Default Applications]
+image/gif=viewnior.desktop
+image/svg+xml=viewnior.desktop
