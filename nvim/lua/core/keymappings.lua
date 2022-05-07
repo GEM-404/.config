@@ -235,3 +235,11 @@ map("t", "<A-d>", "<C-\\><C-n>:lua require('lspsaga.floaterm').close_float_termi
 map("n", "<C-s>", ":wqa!<cr>")
 
 
+map("i", "<C-Space>", ":compe#complete()")
+map("i", "<CR>",      ":compe#confirm(lexima#expand('<LT>CR>', 'i'))")
+map("i", "<C-e>",     ":compe#close('<C-e>')")
+map("i", "<C-f>",     ":compe#scroll({ 'delta': +4 })")
+map("i", "<C-d>",     ":compe#scroll({ 'delta': -4 })")
+
+map("n", "<leader>ex", ":Ex<cr>")
+map("n", ";d", ":bd<cr>")

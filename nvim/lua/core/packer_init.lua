@@ -76,6 +76,8 @@ return packer.startup(function()
     },
   }
 
+  use 'hrsh7th/nvim-compe'
+
   -- Statusline
   use {
     'famiu/feline.nvim',
