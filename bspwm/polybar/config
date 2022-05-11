@@ -24,7 +24,7 @@ fixed-center = true
 width = 100%
 height = 20
 offset-x = 0
-offset-y = 4
+offset-y = 0
 
 background = ${color.BACKGROUND}
 foreground = ${color.FOREGROUND}
