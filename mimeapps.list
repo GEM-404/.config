@@ -9,7 +9,7 @@ application/x-shellscript=geany.desktop;
 application/x-theme=geany.desktop;
 application/json=geany.desktop;
 application/vnd.openxmlformats-officedocument.presentationml.presentation=firefox.desktop;atril.desktop;
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=firefox.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;firefox.desktop;
 
 [Default Applications]
 image/gif=viewnior.desktop

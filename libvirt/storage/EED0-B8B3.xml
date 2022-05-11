@@ -1,0 +1,19 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh pool-edit EED0-B8B3
+or other application using the libvirt API.
+-->
+
+<pool type='dir'>
+  <name>EED0-B8B3</name>
+  <uuid>618a22e0-b9ca-4636-bf02-7ff336688a7e</uuid>
+  <capacity unit='bytes'>0</capacity>
+  <allocation unit='bytes'>0</allocation>
+  <available unit='bytes'>0</available>
+  <source>
+  </source>
+  <target>
+    <path>/run/media/ephantus/EED0-B8B3</path>
+  </target>
+</pool>

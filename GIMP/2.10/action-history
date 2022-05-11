@@ -1,0 +1,6 @@
+# GIMP action-history
+
+(history-item "image-new" 0)
+(history-item "file-quit" 1)
+
+# end of action-history
