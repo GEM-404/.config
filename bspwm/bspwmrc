@@ -16,7 +16,7 @@ fi
 ## Get colors from .Xresources -------------------------------#
 xrdb ~/.Xresources
 
-sh /opt/wall_changer.sh &
+# sh /opt/wall_changer.sh &
 
 getcolors() {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
