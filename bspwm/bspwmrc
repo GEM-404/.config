@@ -16,6 +16,8 @@ fi
 ## Get colors from .Xresources -------------------------------#
 xrdb ~/.Xresources
 
+sh /opt/wall_changer.sh &
+
 getcolors() {
 	FOREGROUND=$(xrdb -query | grep 'foreground:'| awk '{print $NF}')
 	BACKGROUND=$(xrdb -query | grep 'background:'| awk '{print $NF}')
@@ -38,9 +40,9 @@ workspaces() {
 		let name++
 	done
 }
-workspaces
+workspaces -d
 
-bspc config border_width 2
+bspc config border_width 1
 bspc config window_gap 15
 bspc config split_ratio 0.50
 

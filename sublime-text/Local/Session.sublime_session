@@ -11,7 +11,7 @@
 	"settings":
 	{
 		"new_window_full_screen": false,
-		"new_window_height": 990.0,
+		"new_window_height": 932.0,
 		"new_window_maximized": false,
 		"new_window_settings":
 		{
@@ -80,6 +80,7 @@
 			},
 			"file_history":
 			[
+				"/home/ephantus/lab6/Hospital-Management-System/index1.php",
 				"/home/ephantus/lab6/Hospital-Management-System/func2.php",
 				"/home/ephantus/Downloads/main.py",
 				"/run/media/ephantus/347CA47B10F12336/CosmicNvim/lua/cosmic/core/pluginsInit.lua",
@@ -177,7 +178,7 @@
 			{
 			}
 		},
-		"new_window_width": 1246.0
+		"new_window_width": 571.0
 	},
 	"windows":
 	[
@@ -191,39 +192,14 @@
 			"buffers":
 			[
 				{
-					"file": "/home/ephantus/lab6/Hospital-Management-System/index1.php",
+					"file": "/home/ephantus/lab8/POS-Sales-And-Inventory-Management-System-Built-With-Codeigniter/index.php",
 					"settings":
 					{
-						"buffer_size": 5544,
-						"encoding": "UTF-8",
-						"line_ending": "Windows"
+						"buffer_size": 10253,
+						"line_ending": "Unix"
 					},
 					"undo_stack":
 					[
-						[
-							17,
-							1,
-							"right_delete",
-							null,
-							"AQAAAOISAAAAAAAA4hIAAAAAAAABAAAACg",
-							"AQAAAAAAAAABAAAA4hIAAAAAAADiEgAAAAAAAAAAAAAAAAAA"
-						],
-						[
-							19,
-							3,
-							"right_delete",
-							null,
-							"AwAAAN4SAAAAAAAA3hIAAAAAAAABAAAACt4SAAAAAAAA3hIAAAAAAAABAAAACt4SAAAAAAAA3hIAAAAAAAABAAAACg",
-							"AQAAAAAAAAABAAAA3hIAAAAAAADeEgAAAAAAAAAAAAAAAAAA"
-						],
-						[
-							22,
-							2,
-							"right_delete",
-							null,
-							"AgAAAMQSAAAAAAAAxBIAAAAAAAABAAAACsQSAAAAAAAAxBIAAAAAAAABAAAACg",
-							"AQAAAAAAAAABAAAAxBIAAAAAAADEEgAAAAAAAAAAAAAAAAAA"
-						]
 					]
 				}
 			],
@@ -291,6 +267,7 @@
 			],
 			"file_history":
 			[
+				"/home/ephantus/lab6/Hospital-Management-System/index1.php",
 				"/home/ephantus/lab6/Hospital-Management-System/func2.php",
 				"/home/ephantus/Downloads/main.py",
 				"/run/media/ephantus/347CA47B10F12336/CosmicNvim/lua/cosmic/core/pluginsInit.lua",
@@ -341,30 +318,30 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/home/ephantus/lab6/Hospital-Management-System/index1.php",
+							"file": "/home/ephantus/lab8/POS-Sales-And-Inventory-Management-System-Built-With-Codeigniter/index.php",
 							"selected": true,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 5544,
+								"buffer_size": 10253,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										4862,
-										4862
+										6634,
+										6634
 									]
 								],
 								"settings":
 								{
 									"syntax": "Packages/PHP/PHP.sublime-syntax",
-									"tab_size": 2,
-									"translate_tabs_to_spaces": true
+									"tab_size": 4,
+									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 1533.0,
+								"translation.y": 3439.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -414,7 +391,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,1381,15,2627,1005,2646,1024,8",
+			"position": "1,0,0,0,0,2028,45,2599,977,2646,1024,8",
 			"project": "",
 			"replace":
 			{
