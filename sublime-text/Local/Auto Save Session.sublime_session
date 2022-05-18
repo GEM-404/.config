@@ -1,17 +1,18 @@
 {
 	"folder_history":
 	[
+		"/run/media/ephantus/347CA47B10F12336/lab2",
 		"/home/ephantus/lab6/Hospital-Management-System",
 		"/home/ephantus/Downloads"
 	],
 	"last_version": 4126,
-	"last_window_id": 4,
+	"last_window_id": 7,
 	"log_indexing": false,
-	"next_update_check": 1652434937,
+	"next_update_check": 1652953337,
 	"settings":
 	{
 		"new_window_full_screen": false,
-		"new_window_height": 932.0,
+		"new_window_height": 992.0,
 		"new_window_maximized": false,
 		"new_window_settings":
 		{
@@ -80,6 +81,7 @@
 			},
 			"file_history":
 			[
+				"/home/ephantus/lab8/POS-Sales-And-Inventory-Management-System-Built-With-Codeigniter/index.php",
 				"/home/ephantus/lab6/Hospital-Management-System/index1.php",
 				"/home/ephantus/lab6/Hospital-Management-System/func2.php",
 				"/home/ephantus/Downloads/main.py",
@@ -171,14 +173,14 @@
 			"show_minimap": true,
 			"show_open_files": false,
 			"show_tabs": true,
-			"side_bar_visible": false,
+			"side_bar_visible": true,
 			"side_bar_width": 232.0,
 			"status_bar_visible": false,
 			"template_settings":
 			{
 			}
 		},
-		"new_window_width": 571.0
+		"new_window_width": 1248.0
 	},
 	"windows":
 	[
@@ -192,151 +194,22 @@
 			"buffers":
 			[
 				{
-					"file": "/home/ephantus/lab8/POS-Sales-And-Inventory-Management-System-Built-With-Codeigniter/index.php",
+					"file": "/run/media/ephantus/347CA47B10F12336/lab2/templates/single-view.html",
 					"settings":
 					{
-						"buffer_size": 10255,
+						"buffer_size": 7653,
 						"line_ending": "Unix"
 					}
 				},
 				{
-					"contents": "localhost:8000/dashboard.php\n\n\t\t\t\t\t\t<form class=\"form-horizontal\" action=\"<?php echo $_SERVER['PHP_SELF'] ?>\" method=\"post\" id=\"loginForm\">\n\n\n<?php\ninclude(\"../config.php\");\nsession_start();\n\n//Varijabla error za spremanje greske pilikom logina\n$error = \"\";\n\n//Ako je logovan tj. ako sesija jos uvijek postoji preusmjeri na panel\nif (isset($_SESSION['login_user'])) {\n    header(\"location:index.php\");\n}\n\nif ($_SERVER[\"REQUEST_METHOD\"] == \"POST\") {\n    //Spremi unesene podatke iz polja    \n    $entered_username = mysqli_real_escape_string($db, $_POST['username']);\n    $entered_password = mysqli_real_escape_string($db, $_POST['password']);\n    \n        //Prepared statement da povuce podatke iz baze za uneseni username\n        $stmt = $db->prepare(\"SELECT * FROM users WHERE BINARY username = ?\");\n        $stmt->bind_param('s', $entered_username);\n        $stmt->execute();\n        //Spremi podatke\n        $stmt->bind_result($user_id, $username, $password, $firstname, $lastname, $role);\n        $stmt->store_result();\n    \n    //Provjeri da li postoji korisnik tj. samo jedan red kao rezultat\n    if ($stmt->num_rows == 1) {\n        //Fetchuj podatke\n        if ($stmt->fetch()) {\n            //Provjeri da li se uneseni pw poklapa sa Hashom iz baze tj. provjeri da li je pw tacan\n            if (password_verify($entered_password, $password)) {\n                //Provjera da li treba Rehash (ukoliko postoji noviji hash algoritam)\n                if (password_needs_rehash($password, PASSWORD_DEFAULT)) {\n                    //Ako postoji noviji Hash po php password default algoritmu update-uj ga u bazi\n                    $newHash      = password_hash($entered_password, PASSWORD_DEFAULT);\n                    $stmt_reahash = $db->prepare(\"INSERT INTO users (password) VALUES (?) WHERE username = ?\");\n                    $stmt_reahash->bind_param('ss', $newHash, $entered_username);\n                    $stmt_reahash->execute();\n                    $stmt_reahash->close();\n                }\n                //Nakon provjere ili eventualnog update-a stvori sesiju i preusmjeri korisnika na panel\n                $_SESSION['login_user'] = $entered_username;\n                header(\"location: index.php\");\n            } else {\n                $error = \"<div class='alert alert-danger text-center'>Incorrerct Password</div>\";\n            }\n        }\n    } else {\n        $error = \"<div class='alert alert-danger text-center'>User with that username does not exist</div>\";\n    }\n    $stmt->close();\n    $db->close();\n}\n\n?>\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <meta name=\"description\" content=\"Sales and Company Management System\">\n    <meta name=\"author\" content=\"Venan Osmic\">\n\n    <title>SCMS - Login</title>\n\n    <!-- Bootstrap Core CSS -->\n    <link href=\"../vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- MetisMenu CSS -->\n    <link href=\"../vendor/metisMenu/metisMenu.min.css\" rel=\"stylesheet\">\n\n    <!-- Custom CSS -->\n    <link href=\"../dist/css/sb-admin-2.css\" rel=\"stylesheet\">\n\n    <!-- Custom Fonts -->\n    <link href=\"../vendor/font-awesome/css/font-awesome.min.css\" rel=\"stylesheet\" type=\"text/css\">\n\n    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n    <!--[if lt IE 9]>\n        <script src=\"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n        <script src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n\n<body>\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-md-4 col-md-offset-4\">\n                <div class=\"login-panel panel panel-default\">\n                    <div class=\"panel-heading\">\n                        <center><img src=\"../dist/img/logo.png\" alt=\"Logo\"></img></center>\n                    </div>\n                    <div class=\"panel-body\">\n                        <form role=\"form\" action=\"setnewpw.php\" method=\"POST\">\n                            <fieldset>\n                                <div class=\"form-group\">\n                                    <input class=\"form-control\" placeholder=\"email\" name=\"username\" type=\"email\" autofocus>\n                                </div>\n                                <div class=\"form-group\">\n                                    <input class=\"form-control\" placeholder=\"Password\" name=\"password\" type=\"password\" value=\"\">\n                                </div>\n                                <!-- Change this to a button or input when using this as a form -->\n                                <input type=\"submit\" class=\"btn btn-lg btn-success btn-block\" value=\"Login\" />\n                            </fieldset>\n                        </form>\n                    </div>\n                </div>\n                <?php echo $error;?>\n                <div class=\"alert alert-info text-center\">\n                    Development: <strong><a href=\"https://fb.com/Venan24\">Venan Osmić</a></strong><br>\n                    demo@demo.com / demo123\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <!-- jQuery -->\n    <script src=\"../vendor/jquery/jquery.min.js\"></script>\n\n    <!-- Bootstrap Core JavaScript -->\n    <script src=\"../vendor/bootstrap/js/bootstrap.min.js\"></script>\n\n    <!-- Metis Menu Plugin JavaScript -->\n    <script src=\"../vendor/metisMenu/metisMenu.min.js\"></script>\n\n    <!-- Custom Theme JavaScript -->\n    <script src=\"../dist/js/sb-admin-2.js\"></script>\n\n</body>\n\n</html>\n",
+					"file": "/home/ephantus/Desktop/todo.txt",
 					"settings":
 					{
-						"buffer_size": 5705,
-						"line_ending": "Unix",
-						"name": "localhost:8000/dashboard.php"
+						"buffer_size": 764,
+						"line_ending": "Unix"
 					},
 					"undo_stack":
 					[
-						[
-							3,
-							1,
-							"insert",
-							{
-								"characters": "localhos"
-							},
-							"CAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAAAAAABwAAAAAAAAAIAAAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							4,
-							1,
-							"insert",
-							{
-								"characters": "t:800"
-							},
-							"BQAAAAgAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAKAAAAAAAAAAAAAAAKAAAAAAAAAAsAAAAAAAAAAAAAAAsAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAANAAAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							5,
-							1,
-							"insert",
-							{
-								"characters": "0/a"
-							},
-							"AwAAAA0AAAAAAAAADgAAAAAAAAAAAAAADgAAAAAAAAAPAAAAAAAAAAAAAAAPAAAAAAAAABAAAAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAADQAAAAAAAAANAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							6,
-							1,
-							"left_delete",
-							null,
-							"AQAAAA8AAAAAAAAADwAAAAAAAAABAAAAYQ",
-							"AQAAAAAAAAABAAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							7,
-							1,
-							"insert",
-							{
-								"characters": "dashp"
-							},
-							"BQAAAA8AAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAARAAAAAAAAAAAAAAARAAAAAAAAABIAAAAAAAAAAAAAABIAAAAAAAAAEwAAAAAAAAAAAAAAEwAAAAAAAAAUAAAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAADwAAAAAAAAAPAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							8,
-							1,
-							"left_delete",
-							null,
-							"AQAAABMAAAAAAAAAEwAAAAAAAAABAAAAcA",
-							"AQAAAAAAAAABAAAAFAAAAAAAAAAUAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							9,
-							1,
-							"insert",
-							{
-								"characters": "boar.d"
-							},
-							"BgAAABMAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAVAAAAAAAAAAAAAAAVAAAAAAAAABYAAAAAAAAAAAAAABYAAAAAAAAAFwAAAAAAAAAAAAAAFwAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABkAAAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAAEwAAAAAAAAATAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							10,
-							2,
-							"left_delete",
-							null,
-							"AgAAABgAAAAAAAAAGAAAAAAAAAABAAAAZBcAAAAAAAAAFwAAAAAAAAABAAAALg",
-							"AQAAAAAAAAABAAAAGQAAAAAAAAAZAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							11,
-							1,
-							"insert",
-							{
-								"characters": "d.php"
-							},
-							"BQAAABcAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAAFwAAAAAAAAAXAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							12,
-							1,
-							"insert",
-							{
-								"characters": "\n\n"
-							},
-							"AgAAABwAAAAAAAAAHQAAAAAAAAAAAAAAHQAAAAAAAAAeAAAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAAHAAAAAAAAAAcAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							13,
-							1,
-							"paste",
-							null,
-							"AQAAAB4AAAAAAAAAjAAAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAAHgAAAAAAAAAeAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							14,
-							1,
-							"insert",
-							{
-								"characters": "\n\n"
-							},
-							"BQAAAIwAAAAAAAAAjQAAAAAAAAAAAAAAjQAAAAAAAACTAAAAAAAAAAAAAACTAAAAAAAAAJQAAAAAAAAAAAAAAJQAAAAAAAAAmgAAAAAAAAAAAAAAjQAAAAAAAACNAAAAAAAAAAYAAAAJCQkJCQk",
-							"AQAAAAAAAAABAAAAjAAAAAAAAACMAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							15,
-							6,
-							"left_delete",
-							null,
-							"BgAAAJMAAAAAAAAAkwAAAAAAAAABAAAACZIAAAAAAAAAkgAAAAAAAAABAAAACZEAAAAAAAAAkQAAAAAAAAABAAAACZAAAAAAAAAAkAAAAAAAAAABAAAACY8AAAAAAAAAjwAAAAAAAAABAAAACY4AAAAAAAAAjgAAAAAAAAABAAAACQ",
-							"AQAAAAAAAAABAAAAlAAAAAAAAACUAAAAAAAAAAAAAAAAAPC/"
-						],
-						[
-							16,
-							1,
-							"paste",
-							null,
-							"AQAAAI4AAAAAAAAASRYAAAAAAAAAAAAA",
-							"AQAAAAAAAAABAAAAjgAAAAAAAACOAAAAAAAAAAAAAAAAAPC/"
-						]
 					]
 				}
 			],
@@ -400,10 +273,12 @@
 			},
 			"expanded_folders":
 			[
-				"/home/ephantus/lab6/Hospital-Management-System"
+				"/run/media/ephantus/347CA47B10F12336/lab2",
+				"/run/media/ephantus/347CA47B10F12336/lab2/templates"
 			],
 			"file_history":
 			[
+				"/home/ephantus/lab8/POS-Sales-And-Inventory-Management-System-Built-With-Codeigniter/index.php",
 				"/home/ephantus/lab6/Hospital-Management-System/index1.php",
 				"/home/ephantus/lab6/Hospital-Management-System/func2.php",
 				"/home/ephantus/Downloads/main.py",
@@ -445,7 +320,7 @@
 			"folders":
 			[
 				{
-					"path": "/home/ephantus/lab6/Hospital-Management-System"
+					"path": "/run/media/ephantus/347CA47B10F12336/lab2"
 				}
 			],
 			"groups":
@@ -455,11 +330,11 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/home/ephantus/lab8/POS-Sales-And-Inventory-Management-System-Built-With-Codeigniter/index.php",
-							"semi_transient": false,
+							"file": "/run/media/ephantus/347CA47B10F12336/lab2/templates/single-view.html",
+							"semi_transient": true,
 							"settings":
 							{
-								"buffer_size": 10255,
+								"buffer_size": 7653,
 								"regions":
 								{
 								},
@@ -472,12 +347,12 @@
 								],
 								"settings":
 								{
-									"syntax": "Packages/PHP/PHP.sublime-syntax",
+									"syntax": "Packages/HTML/HTML.sublime-syntax",
 									"tab_size": 4,
-									"translate_tabs_to_spaces": false
+									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 3439.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 1,
@@ -486,28 +361,28 @@
 						},
 						{
 							"buffer": 1,
+							"file": "/home/ephantus/Desktop/todo.txt",
 							"selected": true,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 5705,
+								"buffer_size": 764,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										5705,
-										5705
+										723,
+										763
 									]
 								],
 								"settings":
 								{
-									"auto_name": "localhost:8000/dashboard.php",
 									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 1759.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -557,7 +432,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,1381,15,2629,1007,2646,1024,8",
+			"position": "0,0,0,0,0,2013,15,2629,1007,2646,1024,8",
 			"project": "",
 			"replace":
 			{
@@ -598,13 +473,13 @@
 			"show_minimap": true,
 			"show_open_files": false,
 			"show_tabs": true,
-			"side_bar_visible": false,
+			"side_bar_visible": true,
 			"side_bar_width": 232.0,
 			"status_bar_visible": false,
 			"template_settings":
 			{
 			},
-			"window_id": 4,
+			"window_id": 7,
 			"workspace_name": ""
 		}
 	],
