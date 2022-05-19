@@ -71,7 +71,7 @@ super + p
 
 # Lockscreen
 ctrl + alt + l
-    sh /opt/lock.sh
+    sh /opt/locks.sh
 
 # change inner gaps
 super + {_, shift +} g
