@@ -18,6 +18,8 @@ vim.g.mapleader = ' '
 map('n', '<leader>pp', ':lua require"telescope.builtin".planets{}')
 map('n', 'ff', ':FZF<cr>')
 
+--lazygit configurations
+map('n', '<leader>gg', ':LazyGit<cr>')
 
 -- Quickfix mappings
 map('i', 'jj', '<esc>', { noremap = true, silent = true })
@@ -100,12 +102,10 @@ map("", "<Space>", "<Nop>")
 map("n", ";w", ":w<CR>")
 
 map("x", "<C-y>", [["+y]])
-
 map("n", "<C-p>", [["+p]])
 map("i", "<C-p>", [[<ESC>"+pa]])
 
 map("n", "<ESC>", ":nohlsearch<CR>")
-
 
 map("n", "<C-up>", ":res +5<CR>")
 map("n", "<C-down>", ":res -5<CR>")
@@ -179,10 +179,6 @@ map("n", "<A-<>", [[<CMD>BufferLineMovePrev<CR>]])
 map("n", "<A-p>", [[<CMD>:BufferLinePick<CR>]])
 map("n", "<S-x>", [[<CMD>:BufferLinePick<CR>]])
 
-
-
-
-
 -- map("n", "<LEADER>f", "<CMD> lua require"telescope.builtin".find_files(require('telescope.themes').get_dropdown({ previewer = false }))<CR>")
 map("n", "<C-t>", "<CMD>Telescope live_grep<CR>")
 
@@ -190,7 +186,6 @@ map("n", "<leader>n", "<ESC>:tabnew<CR>")
 -- map("i", "<leader>n", "<ESC>:tabnew<CR>")
 
 map("n", "<LEADER>s", [[<ESC>:Startify<CR>]])
-
 
 map("n", "<leader>gd", [[<ESC>:call CocAction('jumpDefinition', 'vsplit')<CR>]])
 

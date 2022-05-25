@@ -113,37 +113,37 @@ return packer.startup(function()
   use { 'mhinz/vim-startify' }
 
   -- file explorer
-  use {
-    'kyazdani42/nvim-tree.lua',
-    cmd = {
-      'NvimTreeClipboard',
-      'NvimTreeClose',
-      'NvimTreeFindFile',
-      'NvimTreeOpen',
-      'NvimTreeRefresh',
-      'NvimTreeToggle',
-    },
-    event = 'VimEnter',
-  }
+  -- use {
+  --   'kyazdani42/nvim-tree.lua',
+  --   cmd = {
+  --     'NvimTreeClipboard',
+  --     'NvimTreeClose',
+  --     'NvimTreeFindFile',
+  --     'NvimTreeOpen',
+  --     'NvimTreeRefresh',
+  --     'NvimTreeToggle',
+  --   },
+  --   event = 'VimEnter',
+  -- }
 
 
-    use {
-    'neovim/nvim-lspconfig',
-    requires = {
-      { 'b0o/SchemaStore.nvim' },
-      { 'williamboman/nvim-lsp-installer' },
-      { 'jose-elias-alvarez/nvim-lsp-ts-utils' },
-      {
-        'jose-elias-alvarez/null-ls.nvim',
-        after = 'nvim-lspconfig',
-      },
-      {
-        'ray-x/lsp_signature.nvim',
-        after = 'nvim-lspconfig',
-      },
-    },
-    event = 'BufWinEnter',
-  }
+  --   use {
+  --   'neovim/nvim-lspconfig',
+  --   requires = {
+  --     { 'b0o/SchemaStore.nvim' },
+  --     { 'williamboman/nvim-lsp-installer' },
+  --     { 'jose-elias-alvarez/nvim-lsp-ts-utils' },
+  --     {
+  --       'jose-elias-alvarez/null-ls.nvim',
+  --       after = 'nvim-lspconfig',
+  --     },
+  --     {
+  --       'ray-x/lsp_signature.nvim',
+  --       after = 'nvim-lspconfig',
+  --     },
+  --   },
+  --   event = 'BufWinEnter',
+  -- }
 
   -- williamboman/nvim-lsp-installer
   use 'williamboman/nvim-lsp-installer'
@@ -156,7 +156,10 @@ return packer.startup(function()
   -- file navigation
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { { 'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim'}, { "kdheepak/lazygit.nvim" } },
+    config = function()
+        require("telescope").load_extension("lazygit")
+    end,
   }
 
   use {'akinsho/bufferline.nvim', tag = "*", requires = 'kyazdani42/nvim-web-devicons'}
