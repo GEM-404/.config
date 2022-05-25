@@ -14,6 +14,10 @@ end
 -- Change leader to a comma
 vim.g.mapleader = ' '
 
+-- telescope planets
+map('n', '<leader>pp', ':lua require"telescope.builtin".planets{}')
+map('n', 'ff', ':FZF<cr>')
+
 
 -- Quickfix mappings
 map('i', 'jj', '<esc>', { noremap = true, silent = true })
@@ -31,6 +35,7 @@ map('n', 'tm', ':colorscheme monokai_soda<cr>')
 map('n', 'td', ':colorscheme desert<cr>')
 map('n', 'ts', ':colorscheme synthwave84<cr>')
 map('n', 'tz', ':colorscheme zellner<cr>')
+map('n', 'tu', ':colorscheme murphy<cr>')
 
 -- buffer navigation
 map('n', '<leader>bp', ':bprev<cr>')
@@ -66,7 +71,6 @@ map("x", "H", "^")
 map("n", "W", "5w")
 map("n", "B", "5b")
 
--- map("n", "<C-z>", "u")
 
 map("n", "<", "<<")
 map("n", ">", ">>")
@@ -126,12 +130,12 @@ map("n", "<C-w>", ":split<CR>")
 map("n", "<C-n>", ":CommentToggle<CR>")
 map("v", "<C-n>", ":CommentToggle<CR>")
 
-map("n", "<C-\\>", [[:FTermToggle<CR>]])
-map("t", "<C-\\>", [[<C-\><C-n>:FTermToggle<CR>]])
-map("t", "<C-n>", [[<C-\><C-n>]])
 
-map("n", "<LEADER>tf", [[:lua require('telescope.builtin').find_files{}<CR>]])
-map("n", "<LEADER>tg", [[:lua require('telescope.builtin').live_grep{}<CR>]])
+map("n", "<C-\\>", [[:terminal<CR>]])
+map("t", "<C-\\>", [[:terminal<CR>]])
+
+map("n", "<LEADER>tf", ":lua require('telescope.builtin').find_files{}<CR>")
+map("n", "<LEADER>tg", "<cmd>Telescope live_grep<cr>")
 
 map("n", "<LEADER>g", [[<CMD>Git<CR>]])
 map("n", "<LEADER>l", [[<CMD>LazyGit<CR>]])
@@ -209,8 +213,8 @@ map("n", "<leader>rt", "<ESC>:RnvimrToggle<CR>")
 -- lsp saga mappings
 --
 map("n", "gh", ":Lspsaga lsp_finder<cr>")
-map("n", "<leader>ca", ":Lspsaga code_action<cr>")
-map("v", "<leader>ca", ":<C-U>Lspsaga ranger_code_action<cr>")
+-- map("n", "<leader>ca", ":Lspsaga code_action<cr>")
+-- map("v", "<leader>ca", ":<C-U>Lspsaga ranger_code_action<cr>")
 
 map("n", "<C-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
 map("n", "<C-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")

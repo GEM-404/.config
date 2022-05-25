@@ -1,8 +1,6 @@
+/** Basic config file **/
+
 configuration {
   show-icons:         true;
-  icon-theme:         "Zafiro";
-  terminal:           "alacritty";
-  cycle:              false;
-  hide-scrollbar:     true;
-  disable-history:    false;
+  icon-theme:         "Papirus";
 }

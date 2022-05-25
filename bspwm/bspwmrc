@@ -147,6 +147,7 @@ bash $HOME/.fehbg
 # Start mpd
 exec mpd &
 exec udisksctl mount -b /dev/sda1 &
+exec udisksctl mount -b /dev/sdb &
 
 # Start bspwm scripts
 bspcolors

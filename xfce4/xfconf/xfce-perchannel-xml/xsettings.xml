@@ -1,5 +1,3 @@
-<!-- Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com> -->
-<!-- Everyone is permitted to copy and distribute copies of this file under GNU-GPL3 -->
 <?xml version="1.0" encoding="UTF-8"?>
 
 <channel name="xsettings" version="1.0">
@@ -10,7 +8,7 @@
     <property name="DoubleClickDistance" type="empty"/>
     <property name="DndDragThreshold" type="empty"/>
     <property name="CursorBlink" type="empty"/>
-    <property name="CursorBlinkTime" type="empty"/>
+    <property name="CursorBlinkTime" type="int" value="502"/>
     <property name="SoundThemeName" type="empty"/>
     <property name="EnableEventSounds" type="bool" value="false"/>
     <property name="EnableInputFeedbackSounds" type="bool" value="false"/>
@@ -37,6 +35,8 @@
     <property name="CursorThemeName" type="string" value="Qogirr"/>
     <property name="CursorThemeSize" type="empty"/>
     <property name="DecorationLayout" type="empty"/>
+    <property name="DialogsUseHeader" type="empty"/>
+    <property name="TitlebarMiddleClick" type="empty"/>
   </property>
   <property name="Gdk" type="empty">
     <property name="WindowScalingFactor" type="int" value="1"/>

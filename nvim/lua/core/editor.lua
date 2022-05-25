@@ -27,8 +27,11 @@ vim.opt.splitright = true
 
 
 -- autocomplete
-vim.opt.completeopt = {'menuone', 'noselect' }
+vim.opt.completeopt = {'menuone', 'noinsert', 'noselect' }
 vim.opt.shortmess = vim.opt.shortmess + { c = true }
+-- vim.opt.completion_enable_auto_popup = 0
+-- vim.opt.completion_enable_snippet = 'Ultisnips'
+-- vim.opt.completion_sorting = "length"
 
 
 require 'nvim-tree'.setup{}
@@ -231,8 +234,9 @@ cmp.setup {
 
 -- Completion settings
   completion = {
-    completeopt = 'menuone,noselect',
-    keyword_length = 2
+
+    completeopt = 'menuone', 'noinsert', 'noselect',
+    keyword_length = 1
   },
 
   -- Key mapping
@@ -346,6 +350,28 @@ M.rose_pine = {
 
 -- autocmd BufEnter * lua require'completion'.on_attach()
 
+-- define an chain complete list
+local chain_complete_list = {
+  default = {
+    {complete_items = {'lsp', 'snippet'}},
+    {complete_items = {'path'}, triggered_only = {'/'}},
+    {complete_items = {'buffers'}},
+  },
+  string = {
+    {complete_items = {'path'}, triggered_only = {'/'}},
+  },
+  comment = {},
+}
+
+local on_attach = function()
+  require'diagnostic'.on_attach()
+  -- passing in a table with on_attach function
+  require'completion'.on_attach({
+      sorting = 'alphabet',
+      matching_strategy_list = {'exact', 'fuzzy'},
+      chain_complete_list = chain_complete_list,
+    })
+    end
 
 local nvim_lsp = require 'lspconfig'
 
@@ -379,7 +405,8 @@ local on_attach = function(client, bufnr)
       [[
       augroup lsp_document_highlight
         autocmd! * <buffer>
-        autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
+        autocmd CursorHold <buffer> silent! lua vim.lsp.buf.document_highlight()
+        autocmd CursorHold * silent! checktime
         autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
       augroup END
     ]], false)
