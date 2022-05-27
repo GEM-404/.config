@@ -60,7 +60,7 @@ ctrl + alt + {v,n,r,h,b}
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {vim,nvim,ranger,htop,bashtop}
 
 ctrl + alt + w
-    sh /opt/wall_changer.sh
+    sh /opt/shell-files/wall_changer.sh
 
 ctrl + alt + p
     alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncmpcpp
@@ -71,7 +71,7 @@ super + p
 
 # Lockscreen
 ctrl + alt + l
-    sh /opt/locks.sh
+    sh /opt/shell-files/locks.sh
 
 # change inner gaps
 super + {_, shift +} g
