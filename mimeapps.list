@@ -11,6 +11,8 @@ application/json=geany.desktop;
 application/vnd.openxmlformats-officedocument.presentationml.presentation=firefox.desktop;atril.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;firefox.desktop;
 application/octet-stream=mpv.desktop;
+video/x-matroska=vlc.desktop;mpv.desktop;
+video/mp4=mpv.desktop;vlc.desktop;
 
 [Default Applications]
 image/gif=viewnior.desktop

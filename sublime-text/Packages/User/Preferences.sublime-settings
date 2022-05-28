@@ -1,0 +1,9 @@
+{
+	"ignored_packages":
+	[
+		"Vintage",
+	],
+	"color_scheme": "Packages/BlackRain/BlackRain.tmTheme",
+	"theme": "Default Dark.sublime-theme",
+	"font_size": 11,
+}
