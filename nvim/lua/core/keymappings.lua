@@ -15,7 +15,7 @@ end
 vim.g.mapleader = ' '
 
 -- telescope planets
-map('n', '<leader>pp', ':lua require"telescope.builtin".planets{}')
+map('n', '<leader>pp', ':lua require"telescope.builtin".planets{}<cr>')
 map('n', 'ff', ':FZF<cr>')
 
 --lazygit configurations

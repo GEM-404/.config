@@ -1,6 +1,16 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/masha/Templates
+- /home/masha/.config
+- /home/masha/lab/go
+- /home/masha/lab/pyfiles
 - /home/ephantus/.config/nvim
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- git commit -am "Added a return function that shows a package has no submodules if
+  filterd_dirs has a len of zero"
+- ""
+- git commit -am "Added a return value for showing  a module has no sub-packages when
+  len of filterd_dirs is zero"
+- git commit -am "Reconfigured my sxhkdrc file ; git push
 hidecommandlog: true

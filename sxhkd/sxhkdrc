@@ -215,7 +215,7 @@ super + shift + {Left,Down,Up,Right}
 	dir={west,south,north,east}; \
 	bspc node -s "$dir.local" --follow \
 	    || bspc node -m "$dir" --follow
-
+        
 # alt + {Left,Right,Up,Down}
 #     dir={west,east,north,south}; bspc node "$dir" -f || bspc monitor "$dir" -f
 ##---------- EOF ----------##
