@@ -30,6 +30,10 @@ map('n', '<leader>cf', ':cfdo %s/')
 map('n', '<leader>cp', ':cprev<cr>zz')
 map('n', '<leader>cn', ':cnext<cr>zz')
 
+-- Yanking and copying whole files in neovim
+map('n', '<f5>', ':%y<cr>')
+map('n', '<f6>', 'ggVGp')
+
 -- Quick Colorscheme changings
 map('n', 'tc', ':colorscheme rose-pine<cr>')
 map('n', 'tm', ':colorscheme monokai_soda<cr>')

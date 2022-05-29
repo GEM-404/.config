@@ -5,7 +5,7 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "JetBrainsMono Nerd Font"
+    family: "JetBrains Mono Medium"
     #style: Regular
 
   # Bold font face
