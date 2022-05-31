@@ -4,8 +4,12 @@
 ##---------- Keybindings for bspwm ----------##
 
 # Terminal (alacritty)
+# super + Return
+    # xfce4-terminal
+
+# Terminal (alacritty)
 super + Return
-    xfce4-terminal
+    kitty
 
 # Move current window to a pre-selected space
 super + shift + m

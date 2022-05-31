@@ -1,5 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/masha/compression
+- /home/masha/lab/shell-files
+- /home/masha/trial/js
+- /home/masha/police/Online-Crime-Management-System-2.0
+- /home/masha/concurrency
 - /home/masha/.config
 - /home/masha/Templates
 - /home/masha/lab/go
@@ -13,4 +18,12 @@ customcommandshistory:
 - git commit -am "Added a return value for showing  a module has no sub-packages when
   len of filterd_dirs is zero"
 - git commit -am "Reconfigured my sxhkdrc file ; git push
+- git remote add origin https://github.com/GEM-404/police
+- git remote remove origin
+- git add . && git commit "Maureen's hard work"
+- 'git push '
+- git push -u origin main
+- git remote add origin https://github.com/GEM-404/jsfiles
+- git remote add origin https://github.com/GEM-404/compression
+- git config credential.helper store
 hidecommandlog: true

@@ -33,6 +33,7 @@ map('n', '<leader>cn', ':cnext<cr>zz')
 -- Yanking and copying whole files in neovim
 map('n', '<f5>', ':%y<cr>')
 map('n', '<f6>', 'ggVGp')
+map('n', '<f4>', 'ggVG')
 
 -- Quick Colorscheme changings
 map('n', 'tc', ':colorscheme rose-pine<cr>')
