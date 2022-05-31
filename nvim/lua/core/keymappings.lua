@@ -21,6 +21,9 @@ map('n', 'ff', ':FZF<cr>')
 --lazygit configurations
 map('n', '<leader>gg', ':LazyGit<cr>')
 
+-- quit! mapping
+map('n', '<C-q>', ':q!<cr>')
+
 -- Quickfix mappings
 map('i', 'jj', '<esc>', { noremap = true, silent = true })
 map('n', '<leader>ck', ':cexpr []<cr>')
