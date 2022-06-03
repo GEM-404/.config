@@ -37,6 +37,7 @@ map('n', '<leader>cn', ':cnext<cr>zz')
 map('n', '<f5>', ':%y<cr>')
 map('n', '<f6>', 'ggVGp')
 map('n', '<f4>', 'ggVG')
+map('n', '<f8>', 'ggVGd')
 
 -- Quick Colorscheme changings
 map('n', 'tc', ':colorscheme rose-pine<cr>')
@@ -51,11 +52,6 @@ map('n', 'tu', ':colorscheme murphy<cr>')
 map('n', '<leader>bp', ':bprev<cr>')
 map('n', '<leader>bn', ':bnext<cr>')
 map('n', '<leader>bd', ':bdelete<cr>')
-
--- tab navigation
-map('n', '<leader>tp', ':tabprevious<cr>')
-map('n', '<leader>tn', ':tabnext<cr>')
-map('n', '<leader>td', ':tabclose<cr>')
 
 -- resize with arrows
 map('n', '<C-Up>', ':resize -2<CR>')
@@ -248,5 +244,5 @@ map("i", "<C-e>",     ":compe#close('<C-e>')")
 map("i", "<C-f>",     ":compe#scroll({ 'delta': +4 })")
 map("i", "<C-d>",     ":compe#scroll({ 'delta': -4 })")
 
-map("n", "<leader>ex", ":Ex<cr>")
+-- map("n", "<leader>ex", ":Ex<cr>")
 map("n", ";d", ":bd<cr>")

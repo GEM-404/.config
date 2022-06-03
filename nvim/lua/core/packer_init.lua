@@ -72,11 +72,19 @@ return packer.startup(function()
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-path',
       'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-cmdline',
       'saadparwaiz1/cmp_luasnip',
     },
   }
 
   use 'hrsh7th/nvim-compe'
+
+  use {
+      'hrsh7th/cmp-vsnip', requires = {
+          'hrsh7th/vim-vsnip',
+          'rafamadriz/friendly-snippets',
+      }
+  }
 
   -- Statusline
   use {

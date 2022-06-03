@@ -11,6 +11,16 @@ vim.opt.encoding = 'utf-8'
 vim.opt.matchpairs = { '(:)', '{:}', '[:]', '<:>' }
 vim.opt.syntax = 'enable'
 
+vim.opt.wildignore = {
+    ".DS_Store", ".git", ".svn", ".hg",
+    "*.a", "*.o", "*.obj", "*.out", "*.so",
+    "*.dll", "*.exe", "*.bin", "*~", "*.swp",
+    "*.bmp", "*.gif", "*.ico", "*.jpg", "*.jpeg",
+    "*.png", "__pycache__", "*.pyc", "*pycache*",
+    "*.tar", "*.gz", "*.bz2", "*.zstd", "*.xz", "*.zip",
+    "*.ttf", "*.otf", "*.woff", "*.woff2", "*.eot",
+}
+
 -- indentation
 vim.opt.autoindent = true
 vim.opt.expandtab = true
@@ -24,10 +34,12 @@ vim.opt.number = true
 vim.opt.rnu = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
-
+vim.opt.ignorecase = true
+vim.opt.spell = true
 
 -- autocomplete
-vim.opt.completeopt = {'menuone', 'noinsert', 'noselect' }
+vim.opt.complete = vim.opt.complete + 'kspell'
+vim.opt.completeopt = {'menuone', 'noinsert', 'noselect', 'preview'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true }
 -- vim.opt.completion_enable_auto_popup = 0
 -- vim.opt.completion_enable_snippet = 'Ultisnips'
@@ -219,6 +231,7 @@ cmp.setup({
 require('nvim-treesitter').setup {
     highlight = {
         enable = true,
+        additional_vim_regex_highlighting = false,
     },
 }
 --
@@ -287,7 +300,14 @@ cmp.setup {
 
 
   -- Setup lspconfig.
--- local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+-- require'lspconfig'.pylsp.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.html.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.eslint.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.jdtls.setup{on_attach=require'completion'.on_attach}
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
 -- nvim-lsp-installer setup
@@ -468,7 +488,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches.
 -- Add your language server below:
-local servers = { 'bashls', 'pyright', 'clangd', 'html', 'tsserver' }
+local servers = { 'bashls', 'pyright', 'clangd', 'html', 'tsserver', "gopls", "pylsp", "jdtls", "eslint","emmetls", "golangci_lint_ls", "rome", "jedi_language_server" }
 
 -- Call setup
 for _, lsp in ipairs(servers) do

@@ -1,14 +1,14 @@
 lastupdatecheck: 0
 recentrepos:
+- /home/masha/.config
+- /home/masha/lab/pyfiles
 - /home/masha/compression
 - /home/masha/lab/shell-files
 - /home/masha/trial/js
 - /home/masha/police/Online-Crime-Management-System-2.0
 - /home/masha/concurrency
-- /home/masha/.config
 - /home/masha/Templates
 - /home/masha/lab/go
-- /home/masha/lab/pyfiles
 - /home/ephantus/.config/nvim
 startuppopupversion: 5
 customcommandshistory:
