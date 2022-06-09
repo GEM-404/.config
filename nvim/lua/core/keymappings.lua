@@ -49,9 +49,9 @@ map('n', 'tz', ':colorscheme zellner<cr>')
 map('n', 'tu', ':colorscheme murphy<cr>')
 
 -- buffer navigation
-map('n', '<leader>bp', ':bprev<cr>')
-map('n', '<leader>bn', ':bnext<cr>')
-map('n', '<leader>bd', ':bdelete<cr>')
+map('n', 'bp', ':bprev<cr>')
+map('n', 'bn', ':bnext<cr>')
+map('n', 'bd', ':bdelete<cr>')
 
 -- resize with arrows
 map('n', '<C-Up>', ':resize -2<CR>')
@@ -104,6 +104,7 @@ map("n", "<C-h>", "<C-w>h")
 map("", "<Space>", "<Nop>")
 
 map("n", ";w", ":w<CR>")
+map("n", ";q", ":q<CR>")
 
 map("x", "<C-y>", [["+y]])
 map("n", "<C-p>", [["+p]])
@@ -138,8 +139,8 @@ map("v", "<C-n>", ":CommentToggle<CR>")
 map("n", "<C-\\>", [[:terminal<CR>]])
 map("t", "<C-\\>", [[:terminal<CR>]])
 
-map("n", "<LEADER>tf", ":lua require('telescope.builtin').find_files{}<CR>")
-map("n", "<LEADER>tg", "<cmd>Telescope live_grep<cr>")
+map("n", "tl", ":lua require('telescope.builtin').find_files{}<CR>")
+map("n", "tg", "<cmd>Telescope live_grep<cr>")
 
 map("n", "<LEADER>g", [[<CMD>Git<CR>]])
 map("n", "<LEADER>l", [[<CMD>LazyGit<CR>]])
@@ -211,29 +212,29 @@ map("n", "<leader>rt", "<ESC>:RnvimrToggle<CR>")
 --
 -- lsp saga mappings
 --
-map("n", "gh", ":Lspsaga lsp_finder<cr>")
+-- map("n", "gh", ":Lspsaga lsp_finder<cr>")
 -- map("n", "<leader>ca", ":Lspsaga code_action<cr>")
 -- map("v", "<leader>ca", ":<C-U>Lspsaga ranger_code_action<cr>")
 
-map("n", "<C-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
-map("n", "<C-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
+-- map("n", "<C-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
+-- map("n", "<C-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
 
-map("n", "gs", ":Lspsaga signature_help<cr>")
-
-map("n", "gr", ":Lspsaga rename<cr>")
-map("n", "gd", ":Lspsaga preview_definition")
-
-map("n", "<leader>cd", ":Lspsaga show_line_diagnostics<cr>")
-map("n", "<leader>cc", ":Lspsaga show_cursor_diagnostics<cr>")
-
--- jump diagnostic
-map("n", "[e", ":Lspsaga diagnostic_jump_next<cr>")
-map("n", "]e", ":Lspsaga diagnostic_jump_prev<cr>")
-
-
--- Float terminal
-map("n", "<A-d>", ":Lspsaga open_floaterm<cr>")
-map("t", "<A-d>", "<C-\\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<cr>")
+-- map("n", "gs", ":Lspsaga signature_help<cr>")
+--
+-- map("n", "gr", ":Lspsaga rename<cr>")
+-- map("n", "gd", ":Lspsaga preview_definition")
+--
+-- map("n", "<leader>cd", ":Lspsaga show_line_diagnostics<cr>")
+-- map("n", "<leader>cc", ":Lspsaga show_cursor_diagnostics<cr>")
+--
+-- -- jump diagnostic
+-- map("n", "[e", ":Lspsaga diagnostic_jump_next<cr>")
+-- map("n", "]e", ":Lspsaga diagnostic_jump_prev<cr>")
+--
+--
+-- -- Float terminal
+-- map("n", "<A-d>", ":Lspsaga open_floaterm<cr>")
+-- map("t", "<A-d>", "<C-\\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<cr>")
 
 map("n", "<C-s>", ":wqa!<cr>")
 

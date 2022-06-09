@@ -22,8 +22,8 @@
     <primaryMonitor>Mouse</primaryMonitor>
   </placement>
   <theme>
-    <name>Arc-Dark</name>
-    <titleLayout>DLIMC</titleLayout>
+    <name>Windows-10</name>
+    <titleLayout>NLIMC</titleLayout>
     <keepBorder>no</keepBorder>
     <animateIconify>yes</animateIconify>
     <font place="ActiveWindow">
@@ -64,7 +64,7 @@
     </font>
   </theme>
   <desktops>
-    <number>5</number>
+    <number>8</number>
     <firstdesk>0</firstdesk>
     <names>
       <name>1</name>
@@ -86,9 +86,9 @@
   </resize>
   <margins>
     <top>0</top>
-    <bottom>10</bottom>
-    <left>10</left>
-    <right>10</right>
+    <bottom>0</bottom>
+    <left>0</left>
+    <right>0</right>
   </margins>
   <dock>
     <position>Bottom</position>

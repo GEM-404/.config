@@ -35,7 +35,7 @@ vim.opt.rnu = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.ignorecase = true
-vim.opt.spell = true
+-- vim.opt.spell = true
 
 -- autocomplete
 vim.opt.complete = vim.opt.complete + 'kspell'
@@ -163,12 +163,12 @@ telescope.setup({
 
 
 
-local saga = require 'lspsaga'
-local floaterm = require('lspsaga.floaterm')
-
-local implement = require('lspsaga.implement')
-
-saga.init_lsp_saga()
+-- local saga = require 'lspsaga'
+-- local floaterm = require('lspsaga.floaterm')
+--
+-- local implement = require('lspsaga.implement')
+--
+-- saga.init_lsp_saga()
 
 -- setup nvim-cmp
 local cmp = require 'cmp'
@@ -250,9 +250,9 @@ cmp.setup {
 -- Completion settings
   completion = {
 
-    completeopt = 'menuone', 'noinsert', 'noselect',
+    completeopt = 'menuone', 'noinsert', 'noselect', 'preview',
     keyword_length = 1
-  },
+    },
 
   -- Key mapping
   mapping = {
@@ -289,8 +289,9 @@ cmp.setup {
   },
 
   -- Load sources, see: https://github.com/topics/nvim-cmp
-  sources = {
+    sources = {
     { name = 'nvim_lsp' },
+    { name = 'vsnip' },
     { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
@@ -302,7 +303,7 @@ cmp.setup {
   -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
--- require'lspconfig'.pylsp.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.pylsp.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.html.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.eslint.setup{on_attach=require'completion'.on_attach}
@@ -451,12 +452,12 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
   buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
   buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  -- buf_set_keymap('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
   buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-  buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
+  -- buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 end
@@ -488,7 +489,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches.
 -- Add your language server below:
-local servers = { 'bashls', 'pyright', 'clangd', 'html', 'tsserver', "gopls", "pylsp", "jdtls", "eslint","emmetls", "golangci_lint_ls", "rome", "jedi_language_server" }
+local servers = { 'bashls', 'pyright', 'clangd', 'html', 'tsserver', "gopls", "pylsp", "jdtls", "eslint","emmet_ls", "golangci_lint_ls", "rome", "jedi_language_server" }
 
 -- Call setup
 for _, lsp in ipairs(servers) do

@@ -4,7 +4,7 @@
 ## Everyone is permitted to copy and distribute copies of this file under GNU-GPL3
 
 ## Default
-STYLE="default"
+STYLE="eleven"
 
 rofi \
 	-show drun \

@@ -6,8 +6,8 @@ monitor = 0
 follow = mouse
 width = 280
 height = 80
-origin = top-right
-offset = 10x48
+origin = bottom-right
+offset = 14x60
 indicate_hidden = yes
 shrink = no
 separator_color = auto
@@ -15,7 +15,7 @@ separator_height = 4
 line_height = 4
 padding = 15
 horizontal_padding = 15
-frame_width = 6
+frame_width = 0
 sort = no
 idle_threshold = 120
 font = JetBrains Mono 10
@@ -45,18 +45,18 @@ context = ctrl+shift+period
 
 [urgency_low]
 timeout = 2
-background = "#282C33"
-foreground = "#D8D8D8"
-frame_color = "#30343B"
+background = "#FFFFFF99"
+foreground = "#1C1C1A"
+frame_color = "#EBEBEB"
 
 [urgency_normal]
 timeout = 5
-background = "#282C33"
-foreground = "#D8D8D8"
-frame_color = "#30343B"
+background = "#FFFFFF99"
+foreground = "#1C1C1A"
+frame_color = "#EBEBEB"
 
 [urgency_critical]
 timeout = 0
-background = "#282C33"
-foreground = "#E06B74"
-frame_color = "#30343B"
+background = "#FFFFFF99"
+foreground = "#CB3F21"
+frame_color = "#EBEBEB"

@@ -20,7 +20,7 @@ return packer.startup(function()
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
   -- lspsaga.nvim
-  use 'glepnir/lspsaga.nvim'
+  -- use 'glepnir/lspsaga.nvim'
 
   -- treesitter.nvim
   use 'nvim-treesitter/nvim-treesitter'
