@@ -21,6 +21,9 @@ map('n', 'ff', ':FZF<cr>')
 --lazygit configurations
 map('n', '<leader>gg', ':LazyGit<cr>')
 
+-- nvimranger configurations
+map('n', '<leader>ra', ':RnvimrToggle<cr>')
+
 -- quit! mapping
 map('n', '<C-q>', ':q!<cr>')
 

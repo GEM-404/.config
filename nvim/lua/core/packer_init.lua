@@ -30,6 +30,9 @@ return packer.startup(function()
 
   -- auto-completion
   use 'nvim-lua/completion-nvim'
+
+  -- nvim ranger
+  use 'kevinhwang91/rnvimr'
     
 
   -- File explorer
