@@ -15,4 +15,4 @@ rofi \
 	-no-drun-show-actions \
 	-terminal alacritty \
 	-kb-cancel Alt-F1 \
-	-theme "$DIR"/rofi/themes/windows11-list-dark.rasi
+	-theme "$DIR"/rofi/themes/squared-material-red.rasi

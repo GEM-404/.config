@@ -108,6 +108,7 @@ map("", "<Space>", "<Nop>")
 
 map("n", ";w", ":w<CR>")
 map("n", ";q", ":q<CR>")
+map("n", ";x", ":x<cr>")
 
 map("x", "<C-y>", [["+y]])
 map("n", "<C-p>", [["+p]])
