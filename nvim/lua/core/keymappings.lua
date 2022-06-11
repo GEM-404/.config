@@ -46,7 +46,7 @@ map('n', '<f8>', 'ggVGd')
 map('n', 'tc', ':colorscheme rose-pine<cr>')
 map('n', 'tm', ':colorscheme monokai_soda<cr>')
 
-map('n', 'td', ':colorscheme desert<cr>')
+map('n', 'td', ':colorscheme default<cr>')
 map('n', 'ts', ':colorscheme synthwave84<cr>')
 map('n', 'tz', ':colorscheme zellner<cr>')
 map('n', 'tu', ':colorscheme murphy<cr>')
