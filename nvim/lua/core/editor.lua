@@ -309,6 +309,11 @@ require'lspconfig'.html.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.eslint.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.jdtls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.bashls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.jedi_language_server.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.golangci_lint_ls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.emmet_ls.setup{on_attach=require'completion'.on_attach}
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
 -- nvim-lsp-installer setup
@@ -573,5 +578,18 @@ require'compe'.setup {
   };
 }
 
+require("neotest").setup({
+  -- adapters = {
+  --   require("neotest-python")({
+  --     dap = { justMyCode = false },
+  --   }),
+  --   require("neotest-plenary"),
+  --   require("neotest-vim-test")({
+  --     ignore_file_types = { "python", "vim", "lua" },
+  --   }),
+  -- },
+})
+
+local lib = require("neotest.lib")
 
 return M

@@ -120,12 +120,17 @@ rehash_precmd() {
 NPM_PACKAGES="${HOME}/.npm-packages"
 
 export PATH="$PATH:$NPM_PACKAGES/bin"
+
 # Preserve MANPATH if you already defined it somewhere in your config
 # Otherwise, fall back to `manpath` so we can inherit from `/etc/manpath`
-
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 add-zsh-hook -Uz precmd rehash_precmd
+
+esp() {
+
+    espeak "Welcome to your terminal, Ephantus!!!"
+}
 
 # omz
 alias zshconfig="geany ~/.zshrc"
@@ -156,6 +161,7 @@ alias cvi='cd ~/Videos/'
 alias cpu='cd ~/Public/'
 alias cte='cd ~/Templates/'
 alias ebs='cd ~/ebooks/'
+alias cge='cd ~/gengetone/'
 
 alias conf='cd ~/.config/'
 
@@ -229,8 +235,13 @@ alias code='cd ~/commerce/Apni-Dukaan/; subl .'
 # For TTY support, 
 source ~/.cache/wal/colors-tty.sh
 
-stmt="Some fools don't know when to say no.... Are you one of those fools?"
+wallpaper="$HOME/.cache/wal/wal"
+name=$(cat $wallpaper | cut -d '/' -f 5)
+pic="$HOME/pics/$name"
+hours=$(uptime | cut -d " " -f 5 | cut -d ":" -f 1)
+minutes=$(uptime | cut -d " " -f 5 | cut -d ":" -f 2 | cut -d "," -f 1)
 
 eval $(thefuck --alias)
-cowsay "$(date)" || "$stmt"
-# cows
+notify-send "Current day & date:" "$(date)" -t 9000
+notify-send "Current Wallpaper :" "$name" -i $pic -t 7000
+# notify-send "Uptime => hours : $hours" "          minutes : $minutes" -t 5000 

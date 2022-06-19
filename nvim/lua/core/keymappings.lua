@@ -41,6 +41,7 @@ map('n', '<f5>', ':%y<cr>')
 map('n', '<f6>', 'ggVGp')
 map('n', '<f4>', 'ggVG')
 map('n', '<f8>', 'ggVGd')
+map('n', '<f2>', 'Go<cr>')
 
 -- Quick Colorscheme changings
 map('n', 'tc', ':colorscheme rose-pine<cr>')

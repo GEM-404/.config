@@ -34,6 +34,15 @@ return packer.startup(function()
   -- nvim ranger
   use 'kevinhwang91/rnvimr'
     
+  -- nvim neotest
+  use {
+  "nvim-neotest/neotest",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "antoinemadec/FixCursorHold.nvim"
+      }
+    }
 
   -- File explorer
   use 'kyazdani42/nvim-tree.lua'
