@@ -11,19 +11,6 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- Inspired by the PRIMEAGEN... Copied from the PRIMEAGEN's workflow
---
-map('n', '<leader>vd', ':lua.vim.lsp.buf.definition()<cr>')
-map('n', '<leader>vi', ':lua.vim.lsp.buf.implementation()<cr>')
-map('n', '<leader>vsh', ':lua.vim.lsp.buf.signature_help()<cr>')
-map('n', '<leader>vrr', ':lua.vim.lsp.buf.references()<cr>')
-map('n', '<leader>vrn', ':lua.vim.lsp.buf.rename()<cr>')
-map('n', '<leader>vh', ':lua.vim.lsp.buf.hover()<cr>')
-map('n', '<leader>vca', ':lua.vim.lsp.buf.code_action()<cr>')
-map('n', '<leader>vsd', ':lua.vim.lsp.diagnostic.show_line_diagnostics()<cr>')
-map('n', '<leader>vn', ':lua.vim.lsp.diagnostic.goto_next()<cr>')
-map('n', '<leader>vn', ':lua.vim.lsp.diagnostic.goto_next()<cr>')
-map('n', '<leader>vll', ':call LspLocationList<cr>')
 
 -- Change leader to a comma
 vim.g.mapleader = ' '
@@ -220,46 +207,7 @@ map("n", "tf", "<ESC>:FloatermToggle<CR>")
 
 map("n", "<leader>rt", "<ESC>:RnvimrToggle<CR>")
 
-
--- map('n', '<A-j>', ":MoveLine(1)<CR>")
--- map('n', '<A-k>', ":MoveLine(-1)<CR>")
--- map('v', '<A-j>', ":MoveBlock(1)<CR>")
--- map('v', '<A-k>', ":MoveBlock(-1)<CR>")
-
- -- map('n', ':pyt', ":!python %<CR>")
--- map('n', 'cpp', ":!c++ % -o %:r && ./%:r <CR>")
--- map('n', 'sh', ":!chmod +x % && source %<CR>")
--- map('n', 'c', ":!clang % -o %:r && ./%:r <CR>")
--- map('n', 'jv', ":!javac % && java %:r <CR>")
---
--- lsp saga mappings
---
--- map("n", "gh", ":Lspsaga lsp_finder<cr>")
--- map("n", "<leader>ca", ":Lspsaga code_action<cr>")
--- map("v", "<leader>ca", ":<C-U>Lspsaga ranger_code_action<cr>")
-
--- map("n", "<C-f>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
--- map("n", "<C-b>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
-
--- map("n", "gs", ":Lspsaga signature_help<cr>")
---
--- map("n", "gr", ":Lspsaga rename<cr>")
--- map("n", "gd", ":Lspsaga preview_definition")
---
--- map("n", "<leader>cd", ":Lspsaga show_line_diagnostics<cr>")
--- map("n", "<leader>cc", ":Lspsaga show_cursor_diagnostics<cr>")
---
--- -- jump diagnostic
--- map("n", "[e", ":Lspsaga diagnostic_jump_next<cr>")
--- map("n", "]e", ":Lspsaga diagnostic_jump_prev<cr>")
---
---
--- -- Float terminal
--- map("n", "<A-d>", ":Lspsaga open_floaterm<cr>")
--- map("t", "<A-d>", "<C-\\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<cr>")
-
 map("n", "<C-s>", ":wqa!<cr>")
-
 
 map("i", "<C-Space>", ":compe#complete()")
 map("i", "<CR>",      ":compe#confirm(lexima#expand('<LT>CR>', 'i'))")
@@ -269,3 +217,20 @@ map("i", "<C-d>",     ":compe#scroll({ 'delta': -4 })")
 
 -- map("n", "<leader>ex", ":Ex<cr>")
 map("n", ";d", ":bd<cr>")
+
+-- Inspired by the PRIMEAGEN... Copied from the PRIMEAGEN's workflow
+--
+map('n', '<leader>vd', ':lua.vim.lsp.buf.definition()<cr>')
+map('n', '<leader>vi', ':lua.vim.lsp.buf.implementation()<cr>')
+map('n', '<leader>vsh', ':lua.vim.lsp.buf.signature_help()<cr>')
+map('n', '<leader>vrr', ':lua.vim.lsp.buf.references()<cr>')
+map('n', '<leader>vrn', ':lua.vim.lsp.buf.rename()<cr>')
+map('n', '<leader>vh', ':lua.vim.lsp.buf.hover()<cr>')
+map('n', '<leader>vca', ':lua.vim.lsp.buf.code_action()<cr>')
+map('n', '<leader>vsd', ':lua.vim.lsp.diagnostic.show_line_diagnostics()<cr>')
+map('n', '<leader>vn', ':lua.vim.lsp.diagnostic.goto_next()<cr>')
+map('n', '<leader>vn', ':lua.vim.lsp.diagnostic.goto_next()<cr>')
+map('n', '<leader>vll', ':call LspLocationList<cr>')
+
+map('c', ':jj', '<ESC>')
+map('c', ':kk', '<ESC>')
