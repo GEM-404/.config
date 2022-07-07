@@ -64,10 +64,12 @@ ctrl + alt + {v,n,r,h,b}
 	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {vim,nvim,ranger,htop,bashtop}
 
 ctrl + alt + w
-    sh /opt/shell-files/wall_changer.sh
+    notify-send "hello there grand-master"
+    # sh ~/lab/shell-files/wall_changer.sh
 
 ctrl + alt + p
-    alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncmpcpp
+    notify-send "I am changing the wallpaper now"
+    # alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e ncmpcpp
 
 # Color Picker
 super + p

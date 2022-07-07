@@ -1,0 +1,34 @@
+#!/bin/bash
+
+preview() {
+	cat <<-EOF | paste -sd '' >"$LF_YT_TEMPDIR/.fifo"
+	{
+	"action": "add", "identifier": "lf-preview",
+	"path": "$1", "x": $4, "y": $5, "width": $2, "height": $3,
+	"scaler": "contain"
+	}
+	EOF
+}
+
+# Clean message line and active preview.
+lf -remote "send $id :echo ''"
+lf-yt-cleaner
+
+# Preview thumbnail using ueberzug.
+file="$1"; shift
+preview "$file" "$@"
+
+# View video title.
+titlefile=".$(basename "$file").title"
+if title="$(cat ".$(basename "$file").title")"; then
+	lf -remote "send $id :set promptfmt '$title'"
+fi
+
+# Print prompt dependending on whether there are active downloads.
+num_downloads="$(find "$LF_YT_TEMPDIR/.downloading" -type f | wc -l)"
+if [ "$num_downloads" -eq 0 ]; then
+	lf -remote "send $id :echo \"\033[4mEnter\033[0m Play | \033[4mq\033[m Quit | \033[4md\033[0m Download\""
+else
+	lf -remote "send $id :echo \"\033[4mEnter\033[0m Play | \033[4mq\033[m Quit | \033[4md\033[0m Download | \033[4ms\033[0m Stop download of $num_downloads file(s)\""
+fi
+return 127 # nonzero retcode required for lf previews to reload

@@ -8,10 +8,12 @@
       <value type="string" value="3"/>
       <value type="string" value="4"/>
       <value type="string" value="5"/>
-      <value type="string" value="Workspace 6"/>
-      <value type="string" value="Workspace 7"/>
-      <value type="string" value="Workspace 8"/>
+      <value type="string" value="6"/>
+      <value type="string" value="7"/>
+      <value type="string" value="8"/>
+      <value type="string" value="9"/>
+      <value type="string" value="desktop 10"/>
     </property>
-    <property name="workspace_count" type="int" value="8"/>
+    <property name="workspace_count" type="int" value="10"/>
   </property>
 </channel>

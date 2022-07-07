@@ -1,0 +1,101 @@
+#
+
+# set preview true
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
+
+# set preview_script ~/.config/lf/preview.sh
+# set use_preview_script true
+set previewer lf-ueberzug-previewer
+set cleaner lf-ueberzug-cleaner
+
+# Custom Functions
+cmd open ${{
+        case $(file --mime-type "$f" -bL) in
+            text/*|application/json) $EDITOR "$f";;
+            *) xdg-open "$f";;
+        esac
+}}
+
+cmd mkdir ${{
+        printf "Directory Name: "
+        read ans
+        mkdir $ans
+}}
+
+cmd md ${{
+        printf "Directory Name: "
+        read ans
+        mkdir $ans
+}}
+
+cmd mkfile ${{
+        printf "File Name: "
+        read ans
+        $EDITOR $ans
+}}
+
+cmd touch ${{
+        printf "File Name: "
+        read ans
+        $EDITOR $ans
+}}
+
+cmd chmod ${{
+    printf "Mode Bits: "
+    read ans
+
+    for file in "$fx"
+        do
+            chmod $ans $file
+    done
+
+    lf -remote 'send reload'
+}}
+
+cmd sudomkfile ${{
+        printf "File Name: "
+        read ans
+        sudo $EDITOR $ans
+}}
+
+cmd setwallpaper %cp "$f" ~/pics/archlinux.png && xwallpaper --zoom "$f"
+
+cmd fzf_jump ${{
+        res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+        if [ -f "$res" ]; then
+            cmd="select"
+}}
+
+# Archive bindings
+cmd unarchive ${{
+    case "$f" in 
+        *.zip) unzip "$f" ;;
+        *.tar.gz) tar -xzvf "$f" ;;
+        * .tar.bz2) tar -zjvf "$f" ;;
+        *.tar) tar -xvf "$f" ;;
+        *) echo "Unsupported format" ;;
+    esac
+}}
+
+map DD delete
+map p paste
+map x cut
+map dd cut
+map y copy
+map yy copy
+map <enter> open
+map R reload
+map mf mkfile
+map bg setwallpaper
+map C clear
+
+map au unarchive
+map gD cd ~/Documents
+map gd cd ~/Downloads
+map gp cd ~/pics
+map gc cd ~/.config
+map gv cd ~/Videos
+map ge cd ~/Desktop

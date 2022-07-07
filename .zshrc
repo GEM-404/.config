@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +15,11 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+#
 ZSH_THEME="spaceship"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="spaceship"
@@ -166,6 +177,8 @@ alias cge='cd ~/gengetone/'
 alias conf='cd ~/.config/'
 
 alias walqi='wal -qi'
+alias walsh='sh /opt/shell-files/wall_changer.sh'
+alias wals='sh ~/lab/shell-files/wall_changer.sh'
 alias ssn='shutdown now'
 alias rbt='reboot'
 alias rst='reset'
@@ -174,6 +187,7 @@ alias rst='reset'
 alias pacman='sudo pacman -S'
 alias pacmany='sudo pacman -Sy'
 alias update='sudo pacman -Syu'
+alias pacrem='sudo pacman -Rns'
 
 alias nv='nvim'
 alias py='python'
@@ -188,7 +202,7 @@ alias pyls='py /opt/pyfiles/dirman.py'
 alias todo='bat ~/Desktop/todo.txt'
 
 alias torem='nv ~/Desktop/todo.txt'
-alias db='mysql -u root -p'
+alias db='mysql -u root -A -p'
 
 alias trains='sh /opt/shell-files/train.sh'
 alias pword='git config credential.helper store'
@@ -228,6 +242,24 @@ cows() {} # function to print sth cool with cows...
 alias szsh='source ~/.zshrc'
 alias fire='cd ~/commerce/Apni-Dukaan/ ; firefox index.html; cd -; '
 alias code='cd ~/commerce/Apni-Dukaan/; subl .'
+alias fex='sudo pkill Xorg -15'
+
+alias usb='cd /run/media/masha/864CA1164CA10253/'
+
+lfcd() {
+    tmp="$(mktemp)"
+    lf-ueberzug -last-dir-path="$tmp" "$a"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp" > /dev/null
+        
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
 
 # changing distro's themes with pywal
 (cat ~/.cache/wal/sequences &)
@@ -242,6 +274,13 @@ hours=$(uptime | cut -d " " -f 5 | cut -d ":" -f 1)
 minutes=$(uptime | cut -d " " -f 5 | cut -d ":" -f 2 | cut -d "," -f 1)
 
 eval $(thefuck --alias)
-notify-send "Current day & date:" "$(date)" -t 9000
-notify-send "Current Wallpaper :" "$name" -i $pic -t 7000
+# notify-send "Current day & date:" "$(date)" -t 9000
+# notify-send "Current Wallpaper :" "$name" -i $pic -t 7000
 # notify-send "Uptime => hours : $hours" "          minutes : $minutes" -t 5000 
+
+[ -f ~/.font-files ] && source ~/.font-files
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# figlet -f pagga Main Editor: NEOVIM
+figlet -f pagga EPHANTUS MACHARIA
+

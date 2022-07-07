@@ -309,7 +309,7 @@ require'lspconfig'.html.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.eslint.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.jdtls.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.bashls.setup{on_attach=require'completion'.on_attach}
+-- require'lspconfig'.bashls.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.tsserver.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.jedi_language_server.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.golangci_lint_ls.setup{on_attach=require'completion'.on_attach}
@@ -494,7 +494,7 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches.
 -- Add your language server below:
-local servers = { 'bashls', 'pyright', 'clangd', 'html', 'tsserver', "gopls", "pylsp", "jdtls", "eslint","emmet_ls", "golangci_lint_ls", "rome", "jedi_language_server" }
+local servers = { 'pyright', 'clangd', 'html', 'tsserver', "gopls", "pylsp", "jdtls", "eslint","emmet_ls", "golangci_lint_ls", "rome", "jedi_language_server" }
 
 -- Call setup
 for _, lsp in ipairs(servers) do
@@ -591,5 +591,46 @@ require("neotest").setup({
 })
 
 local lib = require("neotest.lib")
+
+local true_zen = require("true-zen")
+
+vim.g.lushwal_configuration = {
+	compile_to_vimscript = true,
+	color_overrides = nil,
+	addons = {
+		ale = false,
+		barbar = false,
+		bufferline_nvim = true, -- false
+		coc_nvim = false,
+		dashboard_nvim = false,
+		fern_vim = false,
+		gina = false,
+		gitsigns_nvim = false,
+		hop_nvim = false,
+		hydra_nvim = false,
+		indent_blankline_nvim = false,
+		lightspeed_nvim = false,
+		lspsaga_nvim = false,
+		lsp_trouble_nvim = false,
+		lualine = true, -- false
+		markdown = false,
+		native_lsp = true,
+		neogit = false,
+		neomake = false,
+		nerdtree = false,
+		nvim_cmp = false,
+		nvim_tree_lua = true, -- false
+		nvim_ts_rainbow = false,
+		semshi = false,
+		telescope_nvim = true, -- false
+		treesitter = true,
+		vim_dirvish = false,
+		vim_gitgutter = false,
+		vim_signify = false,
+		vim_sneak = false,
+		which_key_nvim = false,
+	}
+}
+
 
 return M

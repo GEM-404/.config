@@ -5,7 +5,7 @@
 
 [module/volume]
 type = internal/pulseaudio
-monitor = VGA1
+monitor = LVDS1
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
@@ -50,7 +50,7 @@ ramp-headphones-1 = 
 
 [module/bna]
 type = custom/text
-monitor = VGA1
+monitor = LVDS1
 
 content = " NA"
 content-prefix = 
@@ -62,7 +62,7 @@ content-padding = 0
 
 [module/backlight]
 type = internal/xbacklight
-monitor = VGA1
+monitor = LVDS1
 
 card = intel_backlight
 
@@ -87,7 +87,7 @@ ramp-foreground = ${color.MAGENTA}
 
 [module/brightness]
 type = internal/backlight
-monitor = VGA1
+monitor = LVDS1
 
 card = ${system.graphics_card}
 
@@ -114,7 +114,7 @@ ramp-foreground = ${color.MAGENTA}
 
 [module/battery]
 type = internal/battery
-monitor = VGA1
+monitor = LVDS1
 
 full-at = 99
 
@@ -176,10 +176,13 @@ ws-icon-0 = I;
 ws-icon-1 = II;
 ws-icon-2 = III;
 ws-icon-3 = IV;
-ws-icon-4 = V;
+;; ws-icon-4 = V;
+ws-icon-4 = V; 
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
+ws-icon-8 = IX;🔥
+ws-icon-9 = IIX;🐧
 ws-icon-default = 
 
 format = <label-state>
@@ -315,7 +318,7 @@ icon-next-foreground = ${color.CYAN}
 [module/ethernet]
 type = internal/network
 interface = ${system.network_interface}
-monitor = VGA1
+monitor = LVDS1
 
 interval = 1.0
 accumulate-stats = true
@@ -339,7 +342,7 @@ label-disconnected = "%{A1:networkmanager_dmenu &:}Offline%{A}"
 [module/network]
 type = internal/network
 interface = ${system.network_interface}
-monitor = VGA1
+monitor = LVDS1
 
 
 interval = 1.0

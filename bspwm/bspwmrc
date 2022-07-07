@@ -43,7 +43,7 @@ workspaces() {
 workspaces -d
 
 bspc config border_width 1
-bspc config window_gap 5
+bspc config window_gap 25
 bspc config split_ratio 0.50
 
 bspc config focused_border_color "$MYWHITE"
@@ -68,6 +68,7 @@ bspc rule -a Alacritty desktop='^1' follow=on focus=on
 
 # 2 > web
 bspc rule -a firefox desktop='^2' follow=on focus=on
+bspc rule -a zathura desktop='^4' follow=on focus=on
 bspc rule -a chromium desktop='^2' follow=on focus=on
 
 # 3 > files
@@ -120,6 +121,8 @@ bspc rule -a stalonetray state=floating manage=off
 # Kill if already running
 killall -9 xsettingsd sxhkd dunst ksuperkey xfce4-power-manager
 
+bspc rule -a Zathura state=tiled
+
 # Lauch xsettingsd daemon
 xsettingsd &
 
@@ -146,9 +149,6 @@ bash $HOME/.fehbg
 
 # Start mpd
 exec mpd &
-
-exec udisksctl mount -b /dev/sda1 &
-exec udisksctl mount -b /dev/sdb1/ &
 
 # Start bspwm scripts
 bspcolors

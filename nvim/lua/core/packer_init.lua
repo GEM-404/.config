@@ -25,6 +25,12 @@ return packer.startup(function()
   -- treesitter.nvim
   use 'nvim-treesitter/nvim-treesitter'
 
+  -- pywal -like module -> lushwal
+  use({
+	"oncomouse/lushwal",
+	requires = { { "rktjmp/lush.nvim", opt = true }, { "rktjmp/shipwright.nvim", opt = true } },
+    })
+
   -- fatih/vim-go
   use 'fatih/vim-go'
 
@@ -33,6 +39,9 @@ return packer.startup(function()
 
   -- nvim ranger
   use 'kevinhwang91/rnvimr'
+
+  -- Pocco81 for zenmode
+  use 'Pocco81/TrueZen.nvim'
     
   -- nvim neotest
   use {
@@ -195,4 +204,3 @@ return packer.startup(function()
 
 
 end)
-

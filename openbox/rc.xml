@@ -22,7 +22,7 @@
     <primaryMonitor>Mouse</primaryMonitor>
   </placement>
   <theme>
-    <name>Windows-10</name>
+    <name>Windows-10-Dark</name>
     <titleLayout>NLIMC</titleLayout>
     <keepBorder>no</keepBorder>
     <animateIconify>yes</animateIconify>
@@ -64,7 +64,7 @@
     </font>
   </theme>
   <desktops>
-    <number>8</number>
+    <number>10</number>
     <firstdesk>0</firstdesk>
     <names>
       <name>1</name>
@@ -72,6 +72,11 @@
       <name>3</name>
       <name>4</name>
       <name>5</name>
+      <name>6</name>
+      <name>7</name>
+      <name>8</name>
+      <name>9</name>
+      <name>10</name>
     </names>
     <popupTime>0</popupTime>
   </desktops>

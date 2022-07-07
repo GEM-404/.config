@@ -307,4 +307,4 @@ change_dunst '280' '80' '10x46' 'top-right' 'JetBrains Mono 10' '0'
 change_dock && cat "$HOME"/.cache/plank.conf | dconf load /net/launchpad/plank/docks/
 
 # Change compositor settings
-#compositor 'glx' '6' '14 0.30 -12 -12' 'none 0'
+compositor 'glx' '6' '14 0.30 -12 -12' 'none 0'

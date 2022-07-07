@@ -307,4 +307,4 @@ change_dunst '280' '80' '10x44' 'top-right' 'Iosevka Custom 9' '0'
 change_dock && cat "$HOME"/.cache/plank.conf | dconf load /net/launchpad/plank/docks/
 
 # Change compositor settings
-#compositor 'glx' '0' '14 0.30 -12 -12' 'none 0'
+compositor 'glx' '0' '14 0.30 -12 -12' 'none 0'

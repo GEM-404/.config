@@ -11,12 +11,28 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+-- Inspired by the PRIMEAGEN... Copied from the PRIMEAGEN's workflow
+--
+map('n', '<leader>vd', ':lua.vim.lsp.buf.definition()<cr>')
+map('n', '<leader>vi', ':lua.vim.lsp.buf.implementation()<cr>')
+map('n', '<leader>vsh', ':lua.vim.lsp.buf.signature_help()<cr>')
+map('n', '<leader>vrr', ':lua.vim.lsp.buf.references()<cr>')
+map('n', '<leader>vrn', ':lua.vim.lsp.buf.rename()<cr>')
+map('n', '<leader>vh', ':lua.vim.lsp.buf.hover()<cr>')
+map('n', '<leader>vca', ':lua.vim.lsp.buf.code_action()<cr>')
+map('n', '<leader>vsd', ':lua.vim.lsp.diagnostic.show_line_diagnostics()<cr>')
+map('n', '<leader>vn', ':lua.vim.lsp.diagnostic.goto_next()<cr>')
+map('n', '<leader>vn', ':lua.vim.lsp.diagnostic.goto_next()<cr>')
+map('n', '<leader>vll', ':call LspLocationList<cr>')
+
 -- Change leader to a comma
 vim.g.mapleader = ' '
 
 -- telescope planets
 map('n', '<leader>pp', ':lua require"telescope.builtin".planets{}<cr>')
 map('n', 'ff', ':FZF<cr>')
+
+map('n', '<F12>', ':TZAtaraxis<cr>')
 
 --lazygit configurations
 map('n', '<leader>gg', ':LazyGit<cr>')
@@ -42,6 +58,7 @@ map('n', '<f6>', 'ggVGp')
 map('n', '<f4>', 'ggVG')
 map('n', '<f8>', 'ggVGd')
 map('n', '<f2>', 'Go<cr>')
+map('n', '<f7>', 'dG')
 
 -- Quick Colorscheme changings
 map('n', 'tc', ':colorscheme rose-pine<cr>')
