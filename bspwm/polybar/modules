@@ -5,7 +5,6 @@
 
 [module/volume]
 type = internal/pulseaudio
-monitor = LVDS1
 
 ; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
 ; If not, uses default sink
@@ -50,7 +49,6 @@ ramp-headphones-1 = 
 
 [module/bna]
 type = custom/text
-monitor = LVDS1
 
 content = " NA"
 content-prefix = 
@@ -62,7 +60,6 @@ content-padding = 0
 
 [module/backlight]
 type = internal/xbacklight
-monitor = LVDS1
 
 card = intel_backlight
 
@@ -87,9 +84,8 @@ ramp-foreground = ${color.MAGENTA}
 
 [module/brightness]
 type = internal/backlight
-monitor = LVDS1
 
-card = ${system.graphics_card}
+card = ${system.sys_graphics_card}
 
 enable-scroll = true
 
@@ -114,12 +110,11 @@ ramp-foreground = ${color.MAGENTA}
 
 [module/battery]
 type = internal/battery
-monitor = LVDS1
 
 full-at = 99
 
-battery = ${system.battery}
-adapter = ${system.adapter}
+battery = ${system.sys_battery}
+adapter = ${system.sys_adapter}
 
 poll-interval = 2
 time-format = %H:%M
@@ -159,7 +154,6 @@ animation-charging-framerate = 750
 
 [module/bspwm]
 type = internal/bspwm
-monitor = LVDS1
 
 pin-workspaces = true
 inline-mode = false
@@ -176,13 +170,10 @@ ws-icon-0 = I;
 ws-icon-1 = II;
 ws-icon-2 = III;
 ws-icon-3 = IV;
-;; ws-icon-4 = V;
-ws-icon-4 = V; 
+ws-icon-4 = V;
 ws-icon-5 = VI;
 ws-icon-6 = VII;
 ws-icon-7 = VIII;
-ws-icon-8 = IX;🔥
-ws-icon-9 = IIX;🐧
 ws-icon-default = 
 
 format = <label-state>
@@ -232,7 +223,6 @@ label-separator-foreground = ${color.ALTBLACK}
 
 [module/mod]
 type = internal/bspwm
-monitor = LVDS1
 
 format = <label-mode>
 format-background = ${color.YELLOW}
@@ -254,7 +244,6 @@ label-private = " | Private"
 
 [module/date]
 type = internal/date
-monitor = LVDS1
 
 interval = 1.0
 
@@ -273,7 +262,6 @@ label-font = 4
 
 [module/mpd]
 type = internal/mpd
-monitor = LVDS1
 
 ;;host = 127.0.0.1
 ;;port = 6600
@@ -317,8 +305,7 @@ icon-next-foreground = ${color.CYAN}
 ; If you use both a wired and a wireless network, add both modules in config.
 [module/ethernet]
 type = internal/network
-interface = ${system.network_interface}
-monitor = LVDS1
+interface = ${system.sys_network_interface}
 
 interval = 1.0
 accumulate-stats = true
@@ -341,9 +328,7 @@ label-disconnected = "%{A1:networkmanager_dmenu &:}Offline%{A}"
 
 [module/network]
 type = internal/network
-interface = ${system.network_interface}
-monitor = LVDS1
-
+interface = ${system.sys_network_interface}
 
 interval = 1.0
 

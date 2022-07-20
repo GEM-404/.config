@@ -1,4 +1,4 @@
-; gimp-2.10 GtkAccelMap rc-file         -*- scheme -*-
+; gimp GtkAccelMap rc-file         -*- scheme -*-
 ; this file is an automated accelerator map dump
 ;
 ; (gtk_accel_path "<Actions>/tools/tools-rotate-image-arbitrary" "")
@@ -71,9 +71,10 @@
 ; (gtk_accel_path "<Actions>/drawable/drawable-rotate-270" "")
 ; (gtk_accel_path "<Actions>/plug-in/script-fu-predator" "")
 ; (gtk_accel_path "<Actions>/tools/tools-hardness-increase-percent" "")
-; (gtk_accel_path "<Actions>/plug-in/plug-in-colorify" "")
 ; (gtk_accel_path "<Actions>/view/view-show-grid" "")
+; (gtk_accel_path "<Actions>/plug-in/plug-in-colorify" "")
 ; (gtk_accel_path "<Actions>/image/image-color-management-enabled" "")
+; (gtk_accel_path "<Actions>/plug-in/file-bigtiff-save" "")
 ; (gtk_accel_path "<Actions>/tools/tools-angle-increase" "")
 ; (gtk_accel_path "<Actions>/vectors/vectors-color-tag-violet" "")
 ; (gtk_accel_path "<Actions>/context/context-background-saturation-decrease-skip" "")
@@ -1086,8 +1087,8 @@
 ; (gtk_accel_path "<Actions>/view/view-move-to-screen-menu" "")
 ; (gtk_accel_path "<Actions>/documents/documents-copy-location" "")
 ; (gtk_accel_path "<Actions>/view/view-open-display" "")
-; (gtk_accel_path "<Actions>/layers/layers-linked" "")
 ; (gtk_accel_path "<Actions>/plug-in/file-tiff-save2" "")
+; (gtk_accel_path "<Actions>/layers/layers-linked" "")
 ; (gtk_accel_path "<Actions>/tool-options/tool-options-save-preset-menu" "")
 ; (gtk_accel_path "<Actions>/context/context-brush-spacing-maximum" "")
 ; (gtk_accel_path "<Actions>/images/images-delete" "")

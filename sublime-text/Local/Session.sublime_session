@@ -6,7 +6,7 @@
 	"last_version": 4126,
 	"last_window_id": 5,
 	"log_indexing": false,
-	"next_update_check": 1656879509,
+	"next_update_check": 1658388222,
 	"settings":
 	{
 		"new_window_full_screen": false,
@@ -185,127 +185,38 @@
 			"buffers":
 			[
 				{
-					"contents": "<!DOCTYPE html>\n<html>\n<head>\n\t<meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<title></title>\n</head>\n<body>\n\n</body>\n</html>",
+					"file": "/home/masha/.zshrc",
 					"settings":
 					{
-						"buffer_size": 172,
+						"buffer_size": 8414,
+						"encoding": "UTF-8",
 						"line_ending": "Unix"
 					},
 					"undo_stack":
 					[
 						[
-							1,
-							1,
-							"insert",
-							{
-								"characters": "hello"
-							},
-							"BQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAAAAAA",
-							"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							2,
-							1,
-							"insert",
-							{
-								"characters": " thre"
-							},
-							"BQAAAAUAAAAAAAAABgAAAAAAAAAAAAAABgAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAKAAAAAAAAAAAAAAA",
-							"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAFAAAAAAAAAAUAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
 							3,
+							6,
+							"left_delete",
+							null,
+							"BgAAAOMgAAAAAAAA4yAAAAAAAAABAAAAZuIgAAAAAAAA4iAAAAAAAAABAAAAdeEgAAAAAAAA4SAAAAAAAAABAAAAbeAgAAAAAAAA4CAAAAAAAAABAAAAdN8gAAAAAAAA3yAAAAAAAAABAAAACt4gAAAAAAAA3iAAAAAAAAABAAAACg",
+							"AQAAAAAAAAABAAAA5CAAAAAAAADkIAAAAAAAAAAAAAAAAPC/"
+						],
+						[
+							7,
 							2,
-							"left_delete",
+							"right_delete",
 							null,
-							"AgAAAAkAAAAAAAAACQAAAAAAAAABAAAAZQgAAAAAAAAACAAAAAAAAAABAAAAcg",
-							"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAKAAAAAAAAAAoAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							4,
-							1,
-							"insert",
-							{
-								"characters": "ere"
-							},
-							"AwAAAAgAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAKAAAAAAAAAAAAAAAKAAAAAAAAAAsAAAAAAAAAAAAAAA",
-							"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAIAAAAAAAAAAgAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							1,
-							12,
-							"left_delete",
-							null,
-							"CwAAAAoAAAAAAAAACgAAAAAAAAABAAAAZQkAAAAAAAAACQAAAAAAAAABAAAAcggAAAAAAAAACAAAAAAAAAABAAAAZQcAAAAAAAAABwAAAAAAAAABAAAAaAYAAAAAAAAABgAAAAAAAAABAAAAdAUAAAAAAAAABQAAAAAAAAABAAAAIAQAAAAAAAAABAAAAAAAAAABAAAAbwMAAAAAAAAAAwAAAAAAAAABAAAAbAIAAAAAAAAAAgAAAAAAAAABAAAAbAEAAAAAAAAAAQAAAAAAAAABAAAAZQAAAAAAAAAAAAAAAAAAAAABAAAAaA",
-							"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAALAAAAAAAAAAsAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							2,
-							1,
-							"insert",
-							{
-								"characters": "<t"
-							},
-							"AgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAA",
-							"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							3,
-							1,
-							"left_delete",
-							null,
-							"AQAAAAEAAAAAAAAAAQAAAAAAAAABAAAAdA",
-							"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							4,
-							1,
-							"insert",
-							{
-								"characters": "html"
-							},
-							"BAAAAAEAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABQAAAAAAAAAAAAAA",
-							"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAABAAAAAAAAAAEAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							5,
-							1,
-							"insert_completion",
-							{
-								"completion": "!DOCTYPE html>\n<html>\n<head>\n\t<meta charset=\"utf-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<title>$1</title>\n</head>\n<body>\n$0\n</body>\n</html>",
-								"format": "snippet",
-								"keep_prefix": false,
-								"must_insert": false,
-								"trigger": "html"
-							},
-							"AgAAAAEAAAAAAAAAAQAAAAAAAAAEAAAAaHRtbAEAAAAAAAAArAAAAAAAAAAAAAAA",
-							"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAFAAAAAAAAAAUAAAAAAAAAAAAAAAAA8L8"
+							"AQAAAN8gAAAAAAAA3yAAAAAAAAABAAAACg",
+							"AQAAAAAAAAABAAAA3yAAAAAAAADfIAAAAAAAAAAAAAAAACJA"
 						],
 						[
 							8,
 							1,
-							"insert",
-							{
-								"characters": ";w"
-							},
-							"AwAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAKwAAAA8IURPQ1RZUEUgaHRtbD4KPGh0bWw+CjxoZWFkPgoJPG1ldGEgY2hhcnNldD0idXRmLTgiPgoJPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xIj4KCTx0aXRsZT48L3RpdGxlPgo8L2hlYWQ+Cjxib2R5PgoKPC9ib2R5Pgo8L2h0bWw+AQAAAAAAAAACAAAAAAAAAAAAAAA",
-							"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAKwAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							9,
-							2,
 							"left_delete",
 							null,
-							"AgAAAAEAAAAAAAAAAQAAAAAAAAABAAAAdwAAAAAAAAAAAAAAAAAAAAABAAAAOw",
-							"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAA8L8"
-						],
-						[
-							10,
-							1,
-							"paste",
-							null,
-							"AQAAAAAAAAAAAAAArAAAAAAAAAAAAAAA",
-							"AgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
+							"AQAAAN4gAAAAAAAA3iAAAAAAAAABAAAACg",
+							"AQAAAAAAAAABAAAA3yAAAAAAAADfIAAAAAAAAAAAAAAAAPC/"
 						]
 					]
 				}
@@ -423,30 +334,30 @@
 					[
 						{
 							"buffer": 0,
+							"file": "/home/masha/.zshrc",
 							"selected": true,
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 172,
+								"buffer_size": 8414,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										0,
-										172
+										8414,
+										8414
 									]
 								],
 								"settings":
 								{
-									"auto_name": "",
-									"syntax": "Packages/HTML/HTML.sublime-syntax",
+									"syntax": "Packages/ShellScript/Bash.sublime-syntax",
 									"tab_size": 4,
-									"translate_tabs_to_spaces": false
+									"translate_tabs_to_spaces": true
 								},
 								"translation.x": 0.0,
-								"translation.y": 0.0,
+								"translation.y": 5859.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -492,7 +403,7 @@
 				"height": 0.0
 			},
 			"pinned_build_system": "",
-			"position": "0,1,0,0,0,0,0,0,0,2646,1024,10",
+			"position": "0,1,0,0,0,0,0,0,0,2646,1024,8",
 			"project": "",
 			"replace":
 			{

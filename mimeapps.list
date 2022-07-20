@@ -1,2 +1,6 @@
 [Added Associations]
 video/x-matroska=vlc.desktop;
+x-scheme-handler/tg=userapp-Telegram Desktop-WDEOO1.desktop;
+
+[Default Applications]
+x-scheme-handler/tg=userapp-Telegram Desktop-WDEOO1.desktop

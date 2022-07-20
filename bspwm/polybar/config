@@ -14,7 +14,7 @@ include-file = ~/.config/bspwm/polybar/colors
 include-file = ~/.config/bspwm/polybar/modules
 
 [bar/main]
-monitor = LVDS1
+monitor =
 monitor-strict = false
 override-redirect = false
 
@@ -22,7 +22,7 @@ bottom = false
 fixed-center = true
 
 width = 100%
-height = 20
+height = 24
 offset-x = 0
 offset-y = 0
 
@@ -89,7 +89,6 @@ compositing-foreground = over
 compositing-overline = over
 compositing-underline = over
 compositing-border = over
-
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 ;;	    __________  ______

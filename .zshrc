@@ -19,7 +19,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="spaceship"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 
-
+# source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="spaceship"
@@ -146,6 +146,7 @@ esp() {
 # omz
 alias zshconfig="geany ~/.zshrc"
 alias ohmyzsh="thunar ~/.oh-my-zsh"
+alias tm='tmux'
 
 # ls
 alias l='ls -lh'
@@ -162,6 +163,8 @@ alias gi='git init'
 alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push origin master'
+
+alias gadd='sh ~/lab/shell-files/gitsh.sh'
 
 # aliases for faster changing of directories
 alias cde='cd ~/Desktop/'
@@ -187,15 +190,19 @@ alias rst='reset'
 alias pacman='sudo pacman -S'
 alias pacmany='sudo pacman -Sy'
 alias update='sudo pacman -Syu'
-alias pacrem='sudo pacman -Rns'
+alias pacrem='sudo pacman -Rcns'
 
 alias nv='nvim'
 alias py='python'
 alias js='node'
 alias ra='ranger'
+alias lf='lfub'
 alias nz='nvim ~/.zshrc'
 alias ex='exit'
 
+# Toggle led aliases
+alias ledon='xset led named "Scroll Lock"'
+alias ledoff='xset -led named "Scroll Lock"'
 
 alias pyman='py /opt/pyfiles/pyman.py'
 alias pyls='py /opt/pyfiles/dirman.py'
@@ -240,26 +247,38 @@ cows() {} # function to print sth cool with cows...
 # I might even implement it in python
 
 alias szsh='source ~/.zshrc'
-alias fire='cd ~/commerce/Apni-Dukaan/ ; firefox index.html; cd -; '
-alias code='cd ~/commerce/Apni-Dukaan/; subl .'
 alias fex='sudo pkill Xorg -15'
+alias toadd='cat >> ~/Desktop/todo.txt'
 
-alias usb='cd /run/media/masha/864CA1164CA10253/'
+# Remove last item from my todo list...
+alias remlst='sed -i "$d" ~/Desktop/todo.txt'
+alias trnm='tmux rename-window'
+alias trwm='tmux rename-window -t'
+alias kllp='tmux kill-pane -a'
 
-lfcd() {
-    tmp="$(mktemp)"
-    lf-ueberzug -last-dir-path="$tmp" "$a"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp" > /dev/null
-        
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir"
-            fi
-        fi
-    fi
+kllw() {
+    while tmux next-window 2> /dev/null; do
+        tmux kill-window
+    done
 }
+
+miniwi() {
+    figlet -f miniwi "$1"
+}
+
+miniwicp() {
+    figlet -f miniwi "$1" | xclip -sel c
+}
+
+maxiwi() {
+    figlet -f maxiwi "$1"
+}
+
+maxiwicp() {
+    figlet -f maxiwi "$1" | xclip -sel c
+}
+
+alias usb='cd /run/media/masha/ECCD-06B0/'
 
 # changing distro's themes with pywal
 (cat ~/.cache/wal/sequences &)
@@ -267,20 +286,26 @@ lfcd() {
 # For TTY support, 
 source ~/.cache/wal/colors-tty.sh
 
-wallpaper="$HOME/.cache/wal/wal"
-name=$(cat $wallpaper | cut -d '/' -f 5)
-pic="$HOME/pics/$name"
-hours=$(uptime | cut -d " " -f 5 | cut -d ":" -f 1)
-minutes=$(uptime | cut -d " " -f 5 | cut -d ":" -f 2 | cut -d "," -f 1)
-
 eval $(thefuck --alias)
-# notify-send "Current day & date:" "$(date)" -t 9000
-# notify-send "Current Wallpaper :" "$name" -i $pic -t 7000
-# notify-send "Uptime => hours : $hours" "          minutes : $minutes" -t 5000 
 
 [ -f ~/.font-files ] && source ~/.font-files
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-# figlet -f pagga Main Editor: NEOVIM
-figlet -f pagga EPHANTUS MACHARIA
 
+# [ -z "$TMUX" ] && { tmux attach || exec tmux new-session && exit; }
+
+tmuf() {
+    trwm 1 editor
+    trwm 2 main
+    trwm 3 misc
+    trwm 4 stuff
+    trwm 5 ranger
+    trwm 6 soth
+    trwm 7 new
+    trwm 8 custom
+    trwm 9 last
+}
+
+# To not forget
+# tmux neww

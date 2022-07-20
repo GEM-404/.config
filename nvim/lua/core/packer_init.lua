@@ -19,17 +19,47 @@ local packer = require 'packer'
 return packer.startup(function()
   use 'wbthomason/packer.nvim' -- packer can manage itself
 
+  use 'catppuccin/nvim'
+  use 'ghifarit53/tokyonight-vim'
+  use 'jiangmiao/auto-pairs'
+
+  use "hrsh7th/nvim-compe"
+
+  use 'morhetz/gruvbox'
+
+  use 'bluz71/vim-moonfly-colors'
+
   -- lspsaga.nvim
   -- use 'glepnir/lspsaga.nvim'
 
   -- treesitter.nvim
   use 'nvim-treesitter/nvim-treesitter'
 
+  -- NVChad terminal plugin
+  use {
+      "NvChad/nvterm",
+      config = function ()
+        require("nvterm").setup()
+      end,
+  }
+
   -- pywal -like module -> lushwal
   use({
 	"oncomouse/lushwal",
 	requires = { { "rktjmp/lush.nvim", opt = true }, { "rktjmp/shipwright.nvim", opt = true } },
     })
+    
+  -- Lua
+  use {
+      "folke/which-key.nvim",
+      config = function()
+        require("which-key").setup {
+          -- your configuration comes here
+          -- or leave it empty to use the default settings
+          -- refer to the configuration section below
+        }
+      end
+    }
 
   -- fatih/vim-go
   use 'fatih/vim-go'
@@ -85,6 +115,8 @@ return packer.startup(function()
   -- LSP
   use 'neovim/nvim-lspconfig'
 
+  use 'L3MON4D3/LuaSnip'
+
   -- Autocomplete
   use {
     'hrsh7th/nvim-cmp',
@@ -98,7 +130,7 @@ return packer.startup(function()
     },
   }
 
-  use 'hrsh7th/nvim-compe'
+  use 'molleweide/luasnip-snippets.nvim'
 
   use {
       'hrsh7th/cmp-vsnip', requires = {

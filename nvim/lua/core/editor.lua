@@ -634,3 +634,5 @@ vim.g.lushwal_configuration = {
 
 
 return M
+
+

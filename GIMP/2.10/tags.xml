@@ -1303,10 +1303,34 @@
   <resource identifier="${gimp_data_dir}/palettes/Web.gpl" checksum="f02e8dfa23d01d6acfbab7f895c2dd16">
   </resource>
 
+  <resource identifier="Anonymous Pro for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Anonymous Pro for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Anonymous Pro for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Anonymous Pro for Powerline Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Arabic Newspaper" checksum="(null)">
   </resource>
 
   <resource identifier="archcraft" checksum="(null)">
+  </resource>
+
+  <resource identifier="Arimo for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Arimo for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Arimo for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Arimo for Powerline Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Asana Math" checksum="(null)">
@@ -1423,6 +1447,18 @@
   <resource identifier="Comfortaa Light" checksum="(null)">
   </resource>
 
+  <resource identifier="Cousine for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cousine for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cousine for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Cousine for Powerline Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="cursor.pcf" checksum="(null)">
   </resource>
 
@@ -1460,6 +1496,18 @@
   </resource>
 
   <resource identifier="DejaVu Sans Mono Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Mono for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Mono for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Mono for Powerline Bold Oblique" checksum="(null)">
+  </resource>
+
+  <resource identifier="DejaVu Sans Mono for Powerline Oblique" checksum="(null)">
   </resource>
 
   <resource identifier="DejaVu Sans Mono Oblique" checksum="(null)">
@@ -1501,6 +1549,15 @@
   <resource identifier="DejaVu Serif Semi-Condensed" checksum="(null)">
   </resource>
 
+  <resource identifier="Droid Sans Mono Dotted for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Droid Sans Mono for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Droid Sans Mono Slashed for Powerline" checksum="(null)">
+  </resource>
+
   <resource identifier="East Syriac Adiabene" checksum="(null)">
   </resource>
 
@@ -1540,13 +1597,55 @@
   <resource identifier="FiraCode Nerd Font" checksum="(null)">
   </resource>
 
+  <resource identifier="Fira Mono for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Fira Mono for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Fira Mono for Powerline Medium" checksum="(null)">
+  </resource>
+
   <resource identifier="Goha-Tibeb Zemen Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Go Mono for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Go Mono for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Go Mono for Powerline Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Go Mono for Powerline Semi-Bold Italic" checksum="(null)">
   </resource>
 
   <resource identifier="google-mdi" checksum="(null)">
   </resource>
 
+  <resource identifier="Hack" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Hack Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Hack Nerd Font" checksum="(null)">
+  </resource>
+
+  <resource identifier="IBM 3270 Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="IBM 3270 Narrow Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="IBM 3270 Semi-Narrow Medium" checksum="(null)">
   </resource>
 
   <resource identifier="IBM Plex Mono" checksum="(null)">
@@ -1589,6 +1688,18 @@
   </resource>
 
   <resource identifier="IBM Plex Mono Ultra-Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Inconsolata-dz for Powerline Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Inconsolata for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Inconsolata for Powerline Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Inconsolata-g for Powerline Medium" checksum="(null)">
   </resource>
 
   <resource identifier="Iosevka" checksum="(null)">
@@ -1795,6 +1906,18 @@
   <resource identifier="Latin Modern Math" checksum="(null)">
   </resource>
 
+  <resource identifier="Liberation Mono for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Mono for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Mono for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Liberation Mono for Powerline Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Material Icons Outlined" checksum="(null)">
   </resource>
 
@@ -1870,6 +1993,78 @@
   <resource identifier="MathJax_Vector Medium" checksum="(null)">
   </resource>
 
+  <resource identifier="Meslo LG L DZ for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L DZ for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L DZ for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L DZ for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG L for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M DZ for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M DZ for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M DZ for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M DZ for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG M for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S DZ for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S DZ for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S DZ for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S DZ for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Meslo LG S for Powerline Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="micro.pcf" checksum="(null)">
   </resource>
 
@@ -1895,6 +2090,15 @@
   </resource>
 
   <resource identifier="Misc Fixed Wide Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="monofur for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="monofur for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="monofur for Powerline Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Monospace" checksum="(null)">
@@ -2113,6 +2317,9 @@
   <resource identifier="Noto Looped Thai UI Thin" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Mono for Powerline" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Music" checksum="(null)">
   </resource>
 
@@ -2309,9 +2516,6 @@
   </resource>
 
   <resource identifier="Noto Sans Bold" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Bold Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Bold Italic" checksum="(null)">
@@ -2669,9 +2873,6 @@
   </resource>
 
   <resource identifier="Noto Sans Inscriptional Parthian" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Italic" checksum="(null)">
@@ -3991,6 +4192,9 @@
   <resource identifier="Noto Traditional Nushu Light" checksum="(null)">
   </resource>
 
+  <resource identifier="NovaMono for Powerline" checksum="(null)">
+  </resource>
+
   <resource identifier="Open Sans" checksum="(null)">
   </resource>
 
@@ -4040,6 +4244,42 @@
   </resource>
 
   <resource identifier="P052 Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="ProFont for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="ProFont for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Light for Powerline Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Light for Powerline Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Medium for Powerline Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Medium for Powerline Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Thin for Powerline weight=250" checksum="(null)">
+  </resource>
+
+  <resource identifier="Roboto Mono Thin for Powerline weight=250 Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Sans-serif" checksum="(null)">
@@ -4144,6 +4384,48 @@
   <resource identifier="Source Code Pro Bold Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Source Code Pro for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Heavy Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Medium Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Semi-Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Semi-Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Ultra-Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Source Code Pro for Powerline Ultra-Light Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Source Code Pro Heavy" checksum="(null)">
   </resource>
 
@@ -4223,6 +4505,30 @@
   </resource>
 
   <resource identifier="Source Code Variable Ultra-Light Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Space Mono" checksum="(null)">
+  </resource>
+
+  <resource identifier="Space Mono Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Space Mono Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Space Mono for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Space Mono for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Space Mono for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Space Mono for Powerline Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Space Mono Italic" checksum="(null)">
   </resource>
 
   <resource identifier="Standard Symbols PS" checksum="(null)">
@@ -4393,6 +4699,9 @@
   <resource identifier="STIX MathJax Variants Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="Symbol Neu for Powerline" checksum="(null)">
+  </resource>
+
   <resource identifier="Terminus" checksum="(null)">
   </resource>
 
@@ -4537,10 +4846,34 @@
   <resource identifier="TeX Gyre Termes Math" checksum="(null)">
   </resource>
 
+  <resource identifier="Tinos for Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Tinos for Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Tinos for Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Tinos for Powerline Italic" checksum="(null)">
+  </resource>
+
   <resource identifier="Traveling _Typewriter" checksum="(null)">
   </resource>
 
   <resource identifier="typicons" checksum="(null)">
+  </resource>
+
+  <resource identifier="Ubuntu Mono derivative Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="Ubuntu Mono derivative Powerline Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Ubuntu Mono derivative Powerline Bold Italic" checksum="(null)">
+  </resource>
+
+  <resource identifier="Ubuntu Mono derivative Powerline Italic" checksum="(null)">
   </resource>
 
   <resource identifier="URW Bookman Light" checksum="(null)">
@@ -4568,6 +4901,12 @@
   </resource>
 
   <resource identifier="waffle" checksum="(null)">
+  </resource>
+
+  <resource identifier="xos4 Terminess Powerline" checksum="(null)">
+  </resource>
+
+  <resource identifier="xos4 Terminess Powerline Bold" checksum="(null)">
   </resource>
 
   <resource identifier="xos4 Terminus" checksum="(null)">

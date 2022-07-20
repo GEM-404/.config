@@ -19,7 +19,7 @@ env:
 window:
   dimensions:
     columns: 82
-    lines: 25
+    lines: 24
 
   padding:
     x: 10
@@ -34,7 +34,7 @@ window:
   multiplier: 3
 
 ## Background opacity
-  opacity: 0.9
+  opacity: 1.0
 
 ## Cursor
 cursor:
@@ -46,3 +46,9 @@ cursor:
 
 ## Live config reload
 live_config_reload: true
+
+## Shell
+#shell:
+#  program: /bin/zsh
+#  args:
+#    - --login

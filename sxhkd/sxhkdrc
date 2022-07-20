@@ -61,11 +61,14 @@ super + shift + {f,w,e}
 
 # Terminal Apps
 ctrl + alt + {v,n,r,h,b}
-	alacritty --config-file ~/.config/bspwm/alacritty/alacritty.yml -e {vim,nvim,ranger,htop,bashtop}
+	kitty -e {vim,nvim,ranger,htop,bashtop}
+	# alacritty --config-file ~/.config/alacritty/alacritty.yml -e {vim,nvim,ranger,htop,bashtop}
+
+ctrl + shift + return
+	kitty -e tmux
 
 ctrl + alt + w
-    notify-send "hello there grand-master"
-    # sh ~/lab/shell-files/wall_changer.sh
+    sh ~/lab/shell-files/wall_changer.sh
 
 ctrl + alt + p
     notify-send "I am changing the wallpaper now"
@@ -214,7 +217,7 @@ alt + shift + {h, j, k, l}
 
 # Hide/Unhide Window
 super + shift + i
-	sh ~/.config/bspwm/bin/winmask
+	sh ~/.config/bspwm/bin/bspwinmask
 
 # One more keybinding to go
 super + shift + {Left,Down,Up,Right}
